@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: "LiveProof: Verifier-Backed Post-Training Evaluation"
+message: "If you use LiveProof, please cite this artifact."
+type: software
+authors:
+  - family-names: "Nguyen"
+    given-names: "Thanh Phi Long"
+version: "0.1.0"
+date-released: "2026-05-25"
+abstract: "LiveProof is a seed-generated, verifier-backed evaluation protocol for measuring frontier AI systems after training, with deterministic task generation, local verification, and public/private corpus splits."
+keywords:
+  - artificial intelligence
+  - evaluation
+  - benchmark contamination
+  - verifier-backed evaluation
+  - reproducibility
+license: "Apache-2.0"
+repository-code: "https://github.com/CHANGE-ME/liveproof"
+preferred-citation:
+  type: article
+  title: "Static Benchmarks Are Dead: Verifier-Backed Post-Training Evals Reveal Structured Algorithmic Blind Spots"
+  authors:
+    - family-names: "Nguyen"
+      given-names: "Thanh Phi Long"
+  year: 2026

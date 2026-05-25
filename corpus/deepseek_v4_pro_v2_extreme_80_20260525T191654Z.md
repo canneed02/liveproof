@@ -1,0 +1,1474 @@
+# LiveProof Model Study
+
+Results file: `corpus/deepseek_v4_pro_v2_extreme_80_20260525T191654Z.results.jsonl`
+Records: 80
+Models: 1
+
+## Model Leaderboard
+
+| Model | Accepted | Rejected | Errors | Total | Acceptance |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `deepseek-v4-pro` | 12 | 68 | 0 | 80 | 15% |
+
+## Family Matrix
+
+| Model | Family | Accepted | Total | Acceptance |
+| --- | --- | ---: | ---: | ---: |
+| `deepseek-v4-pro` | `affine_mod` | 0 | 10 | 0% |
+| `deepseek-v4-pro` | `boolean_count` | 0 | 10 | 0% |
+| `deepseek-v4-pro` | `counterexample_search` | 1 | 10 | 10% |
+| `deepseek-v4-pro` | `dfa_shortest` | 1 | 10 | 10% |
+| `deepseek-v4-pro` | `graph_intervention` | 10 | 10 | 100% |
+| `deepseek-v4-pro` | `grid_checksum` | 0 | 10 | 0% |
+| `deepseek-v4-pro` | `program_trace` | 0 | 10 | 0% |
+| `deepseek-v4-pro` | `string_rewrite` | 0 | 10 | 0% |
+
+## Difficulty Matrix
+
+| Model | Profile | Accepted | Total | Acceptance |
+| --- | --- | ---: | ---: | ---: |
+| `deepseek-v4-pro` | `extreme` | 12 | 80 | 15% |
+
+## Difficulty x Family
+
+| Model | Profile | Family | Accepted | Total | Acceptance |
+| --- | --- | --- | ---: | ---: | ---: |
+| `deepseek-v4-pro` | `extreme` | `affine_mod` | 0 | 10 | 0% |
+| `deepseek-v4-pro` | `extreme` | `boolean_count` | 0 | 10 | 0% |
+| `deepseek-v4-pro` | `extreme` | `counterexample_search` | 1 | 10 | 10% |
+| `deepseek-v4-pro` | `extreme` | `dfa_shortest` | 1 | 10 | 10% |
+| `deepseek-v4-pro` | `extreme` | `graph_intervention` | 10 | 10 | 100% |
+| `deepseek-v4-pro` | `extreme` | `grid_checksum` | 0 | 10 | 0% |
+| `deepseek-v4-pro` | `extreme` | `program_trace` | 0 | 10 | 0% |
+| `deepseek-v4-pro` | `extreme` | `string_rewrite` | 0 | 10 | 0% |
+
+## Failures
+
+### deepseek-v4-pro / lp-affine_mod-0000-fe73383b432e
+
+- Family: `affine_mod`
+- Profile: `extreme`
+- Task hash: `727734f580bc774d5ac78e702ccc65b7c6e10446169a2cc48d98ade61d8ac3a5`
+- Status: `rejected`
+- Verifier: expected '(21, 128)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Work modulo 269. Let x_0 = (42, 264). For t >= 0, x_(t+1) = A x_t + b, where A = [[239, 114], [152, 148]] and b = (167, 220). What is x_279? Return only the ordered pair as two integers, like (a, b).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-dfa_shortest-0001-c65c1e3cef5e
+
+- Family: `dfa_shortest`
+- Profile: `extreme`
+- Task hash: `0afd7b84b8974f222d1b7413e9bc9e1c5918375f838314f345ecac0baff3a8f7`
+- Status: `rejected`
+- Verifier: expected 'cd', got '<empty>'
+- Error: none
+
+Prompt:
+
+```text
+Given this deterministic finite automaton, find the lexicographically first shortest word over alphabet ['a', 'b', 'c', 'd', 'e'] that takes state 8 to state 4. Transitions: 0: a->9, b->21, c->18, d->5, e->16; 1: a->0, b->6, c->11, d->13, e->7; 2: a->0, b->8, c->23, d->16, e->22; 3: a->2, b->7, c->3, d->4, e->0; 4: a->10, b->23, c->7, d->9, e->21; 5: a->6, b->13, c->19, d->22, e->9; 6: a->10, b->18, c->22, d->8, e->14; 7: a->19, b->8, c->17, d->3, e->2; 8: a->7, b->23, c->13, d->9, e->23; 9: a->2, b->19, c->21, d->6, e->18; 10: a->0, b->1, c->20, d->1, e->23; 11: a->6, b->5, c->7, d->20, e->11; 12: a->3, b->19, c->6, d->17, e->10; 13: a->14, b->21, c->5, d->4, e->0; 14: a->2, b->1, c->0, d->11, e->17; 15: a->12, b->4, c->4, d->14, e->20; 16: a->0, b->8, c->2, d->19, e->17; 17: a->11, b->7, c->21, d->17, e->13; 18: a->8, b->21, c->12, d->10, e->2; 19: a->13, b->4, c->14, d->8, e->6; 20: a->20, b->21, c->8, d->16, e->5; 21: a->17, b->5, c->23, d->12, e->16; 22: a->21, b->3, c->17, d->23, e->9; 23: a->6, b->6, c->0, d->19, e->1. Return only the word. If the empty word is correct, return <empty>.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-boolean_count-0003-b30cdb69a56f
+
+- Family: `boolean_count`
+- Profile: `extreme`
+- Task hash: `04e36307c99c6bcf7da86bc4b3a20f803fac56b89714d8677d944e1d9d45e3da`
+- Status: `rejected`
+- Verifier: expected '155', got ''
+- Error: none
+
+Prompt:
+
+```text
+For Boolean variables ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11', 'x12'], how many assignments satisfy this CNF formula: (x8 OR x2) AND (!x7 OR !x11 OR x2) AND (x1 OR !x0 OR !x11) AND (x9 OR x10 OR x6) AND (x1 OR !x12 OR x3) AND (x8 OR x11 OR !x10) AND (!x6 OR x3 OR !x9) AND (!x0 OR !x11) AND (x12 OR !x7) AND (!x4 OR x10 OR x6) AND (x11 OR x5 OR !x7) AND (x4 OR !x12) AND (x0 OR x1) AND (x10 OR x5 OR !x3) AND (!x1 OR x4) AND (x4 OR x5 OR !x12) AND (!x11 OR !x8) AND (!x10 OR x9 OR !x8) AND (!x11 OR !x1) AND (x12 OR !x7) AND (!x6 OR !x0 OR x4) AND (!x10 OR !x4 OR x12)? Return only the integer count.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-program_trace-0004-3614df91ea51
+
+- Family: `program_trace`
+- Profile: `extreme`
+- Task hash: `04f04f667fe54beb42c28a869bae3861fa7e650cb5a542d18a3eb9e94d4180e9`
+- Status: `rejected`
+- Verifier: expected '(193, 64, 193)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Registers r0,r1,r2 start as (213, 252, 68). Arithmetic is modulo 269. Execute these instructions in order: r2 = r2 XOR r0 XOR 86; r2 = r2 * (r0 + 1) + 103; r2 = r2 + 2*r1 + 17; r0 = r0 XOR r0 XOR 198; r2 = r2 + r1 + 14; r1 = r1 XOR r1 XOR 186; r1 = r1 * (r0 + 1) + 86; r2 = r2 XOR r2 XOR 210; r1 = r1 + 2*r2 + 39; r0 = r0 XOR r0 XOR 92; r0 = r0 XOR r0 XOR 176; r1 = r1 * (r2 + 1) + 252; r1 = r1 + 2*r0 + 109; r1 = r1 + 2*r2 + 98; r2 = r2 + r1 + 49; r0 = r0 * (r1 + 1) + 192; r0 = r0 + 2*r1 + 63; r1 = r1 + 2*r1 + 255; r1 = r1 + r0 + 203; r1 = r1 * (r0 + 1) + 99; r1 = r1 + 2*r1 + 28; r2 = r2 + r1 + 38; r0 = r0 + r0 + 229; r2 = r2 XOR r1 XOR 147; r0 = r0 + 2*r0 + 76; r1 = r1 XOR r2 XOR 55; r1 = r1 + r0 + 26; r1 = r1 + r2 + 159; r2 = r2 + 2*r0 + 184; r0 = r0 * (r1 + 1) + 252; r1 = r1 * (r2 + 1) + 104; r1 = r1 + r2 + 111; r1 = r1 + 2*r2 + 134; r1 = r1 * (r2 + 1) + 224; r1 = r1 + 2*r0 + 220; r1 = r1 * (r2 + 1) + 138; r0 = r0 XOR r0 XOR 130; r2 = r2 XOR r1 XOR 28; r2 = r2 + 2*r0 + 86; r1 = r1 + r2 + 140; r1 = r1 * (r2 + 1) + 254; r0 = r0 + r1 + 198; r1 = r1 + 2*r0 + 180; r2 = r2 + r1 + 68; r1 = r1 XOR r0 XOR 20; r1 = r1 + r1 + 173; r2 = r2 XOR r0 XOR 28; r0 = r0 * (r2 + 1) + 8; r2 = r2 XOR r2 XOR 59; r1 = r1 XOR r1 XOR 208; r2 = r2 XOR r2 XOR 208; r1 = r1 + r1 + 198; r1 = r1 XOR r1 XOR 96; r2 = r2 XOR r0 XOR 29; r1 = r1 * (r0 + 1) + 217; r2 = r2 * (r0 + 1) + 165; r1 = r1 + 2*r1 + 29; r0 = r0 XOR r2 XOR 136; r2 = r2 * (r0 + 1) + 169; r1 = r1 + r0 + 103; r0 = r0 + 2*r0 + 58; r1 = r1 * (r0 + 1) + 180; r1 = r1 + 2*r0 + 139; r1 = r1 + 2*r0 + 32; r1 = r1 * (r1 + 1) + 50; r2 = r2 XOR r0 XOR 29; r2 = r2 * (r0 + 1) + 31; r2 = r2 XOR r1 XOR 226; r0 = r0 + r2 + 253; r2 = r2 XOR r1 XOR 12; r0 = r0 XOR r0 XOR 223; r0 = r0 * (r1 + 1) + 196; r2 = r2 XOR r0 XOR 190; r0 = r0 + 2*r1 + 62; r1 = r1 * (r0 + 1) + 160; r0 = r0 + r1 + 63; r1 = r1 * (r1 + 1) + 202; r0 = r0 * (r1 + 1) + 130; r2 = r2 + 2*r2 + 105; r0 = r0 + r2 + 157; r2 = r2 * (r1 + 1) + 51; r2 = r2 XOR r0 XOR 101; r0 = r0 + r0 + 178; r2 = r2 * (r0 + 1) + 166; r0 = r0 * (r2 + 1) + 173; r2 = r2 + 2*r0 + 160; r2 = r2 + r0 + 114; r1 = r1 + 2*r2 + 88; r2 = r2 XOR r2 XOR 17; r1 = r1 XOR r1 XOR 192; r2 = r2 * (r0 + 1) + 71; r0 = r0 + 2*r1 + 241; r0 = r0 + r0 + 243; r2 = r2 + 2*r2 + 97; r0 = r0 + r1 + 150; r1 = r1 XOR r2 XOR 152; r2 = r2 + r0 + 183; r2 = r2 + r1 + 41; r1 = r1 + 2*r0 + 71; r0 = r0 + r2 + 227; r2 = r2 + r0 + 196; r2 = r2 + r0 + 259; r2 = r2 * (r0 + 1) + 159; r1 = r1 + 2*r2 + 56; r1 = r1 XOR r2 XOR 82; r0 = r0 + r2 + 248; r0 = r0 + r2 + 5; r1 = r1 * (r2 + 1) + 163; r2 = r2 + r1 + 246; r0 = r0 + 2*r2 + 251; r0 = r0 XOR r0 XOR 115; r1 = r1 * (r2 + 1) + 76; r1 = r1 + r2 + 201; r0 = r0 XOR r0 XOR 166; r2 = r2 + r2 + 11; r1 = r1 * (r2 + 1) + 152; r0 = r0 + r2 + 44; r2 = r2 + 2*r1 + 256; r2 = r2 XOR r0 XOR 141; r2 = r2 + 2*r1 + 227; r0 = r0 + 2*r2 + 78; r2 = r2 + 2*r0 + 87; r0 = r0 + r0 + 149; r1 = r1 + r2 + 170; r1 = r1 XOR r0 XOR 0; r0 = r0 * (r1 + 1) + 163; r1 = r1 + 2*r0 + 164; r1 = r1 * (r0 + 1) + 248; r1 = r1 + 2*r0 + 206; r2 = r2 + 2*r1 + 21; r0 = r0 + 2*r0 + 2; r1 = r1 + r2 + 229; r0 = r0 + 2*r0 + 102; r0 = r0 + r0 + 63; r0 = r0 + 2*r0 + 148. Return only the final register tuple as (r0, r1, r2).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-counterexample_search-0005-5ede4eaddc46
+
+- Family: `counterexample_search`
+- Profile: `extreme`
+- Task hash: `b941f1b697c5fd66811da173e605d7eff035d3e929964f1d457ede9cdb9e2dad`
+- Status: `rejected`
+- Verifier: expected '1768', got ''
+- Error: none
+
+Prompt:
+
+```text
+Find the smallest integer x in [0, 5708] satisfying all constraints: (20*x + 2) mod 60 = 22; (35*x + 16) mod 77 = 65; (3*x + 43) mod 52 = 43; (3*x + 21) mod 36 = 33; (21*x + 18) mod 60 = 6. Return only x.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-string_rewrite-0006-a4fb00b122f1
+
+- Family: `string_rewrite`
+- Profile: `extreme`
+- Task hash: `a11183a08fa9fa1f37025a6a02d1529bee965476882294ef84d1ab399cb7a757`
+- Status: `rejected`
+- Verifier: expected '12011222221120222012222022221', got ''
+- Error: none
+
+Prompt:
+
+```text
+Start with circular string 13021213113120223012223011310. For each step, replace every position i simultaneously using the pair s[i]s[(i+1) mod n]. Rules: 00->3, 01->1, 02->1, 03->1, 10->0, 11->2, 12->0, 13->3, 20->1, 21->2, 22->2, 23->2, 30->2, 31->3, 32->1, 33->1. After 102 steps, what is the string? Return only the final string.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-grid_checksum-0007-8380bb533601
+
+- Family: `grid_checksum`
+- Profile: `extreme`
+- Task hash: `55f30abb2ac802cb1bfc140849a2758cda6d2cc2b1a29d10d072268d4950b925`
+- Status: `rejected`
+- Verifier: expected '586924', got ''
+- Error: none
+
+Prompt:
+
+```text
+On this 12x12 grid, rows are: 6 3 7 5 1 4 3 6 9 0 8 3; 1 2 7 7 4 7 4 1 8 6 8 0; 6 3 4 0 8 9 2 3 2 9 7 7; 5 9 3 0 9 4 3 0 5 6 5 2; 1 6 3 5 2 1 9 7 2 5 5 4; 9 6 6 1 2 0 2 4 7 7 8 2; 9 9 3 2 0 1 5 4 5 5 2 3; 8 2 4 1 7 2 8 8 7 1 5 5; 2 3 6 1 7 4 8 4 7 9 6 1; 9 2 2 6 3 5 5 5 5 6 4 0; 1 0 5 4 6 3 4 7 9 3 6 9; 8 3 4 9 4 6 7 3 7 5 0 4. Start at row 4, column 4. Follow moves DRUDLLDUUDRDRUURRDUDLRLRRUUDDUDURULRULRLRULLDURUUURULUULRDDLUDULDRDLULLLLDDDRLURLLDRLULDDRURUDRDDDUDDRULDRLDDUURLURUUUDRRLLUURLRLDLDLUDULLDRRDDLULUUUULLRRDLRRDLLDRRLDDUULUDDRRDRRLLLUULLRRLULDLDURLLLRLLULDDDRLUDUDURDDUDULDLDULRUURULDUDDDLUDLDRLRDRLRLUDLRRUDURRLUDRUUUDRRUUDLD with wraparound at edges. Checksum starts at 0; after visiting each new cell, checksum = (checksum*31 + cell_value) mod 1000003. Include the starting cell before moves. Return only the final checksum integer.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-affine_mod-0008-171b74d4b2d3
+
+- Family: `affine_mod`
+- Profile: `extreme`
+- Task hash: `777eeb9c3b0ca5dccdd1af07233c28995cbc40a8732ced4f31524c630e3a4873`
+- Status: `rejected`
+- Verifier: expected '(208, 20)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Work modulo 263. Let x_0 = (205, 70). For t >= 0, x_(t+1) = A x_t + b, where A = [[183, 42], [147, 111]] and b = (1, 204). What is x_217? Return only the ordered pair as two integers, like (a, b).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-program_trace-0012-082aeffdf736
+
+- Family: `program_trace`
+- Profile: `extreme`
+- Task hash: `908f86dd2bed5a66c24f250d5bfb5185620672f326f8915f15906598eb4880f6`
+- Status: `rejected`
+- Verifier: expected '(191, 34, 102)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Registers r0,r1,r2 start as (207, 37, 69). Arithmetic is modulo 269. Execute these instructions in order: r0 = r0 + 2*r2 + 111; r1 = r1 + 2*r1 + 108; r2 = r2 XOR r0 XOR 250; r0 = r0 + 2*r0 + 245; r0 = r0 + r0 + 15; r1 = r1 + r1 + 38; r1 = r1 * (r1 + 1) + 128; r1 = r1 + 2*r0 + 89; r0 = r0 * (r1 + 1) + 35; r2 = r2 XOR r0 XOR 192; r0 = r0 + r1 + 81; r0 = r0 + 2*r0 + 250; r2 = r2 * (r1 + 1) + 68; r1 = r1 * (r2 + 1) + 71; r2 = r2 * (r1 + 1) + 86; r0 = r0 XOR r0 XOR 3; r0 = r0 * (r2 + 1) + 64; r2 = r2 * (r2 + 1) + 231; r1 = r1 + r1 + 8; r0 = r0 + r0 + 215; r2 = r2 * (r2 + 1) + 67; r0 = r0 + r0 + 5; r2 = r2 + r1 + 57; r0 = r0 XOR r0 XOR 133; r0 = r0 + r2 + 88; r2 = r2 XOR r1 XOR 26; r0 = r0 XOR r1 XOR 108; r1 = r1 XOR r2 XOR 47; r1 = r1 + 2*r2 + 127; r0 = r0 * (r1 + 1) + 81; r1 = r1 + 2*r0 + 67; r1 = r1 XOR r0 XOR 135; r1 = r1 + 2*r2 + 12; r1 = r1 + 2*r1 + 84; r0 = r0 XOR r1 XOR 197; r2 = r2 * (r1 + 1) + 195; r1 = r1 XOR r1 XOR 95; r2 = r2 + 2*r2 + 230; r1 = r1 * (r2 + 1) + 47; r1 = r1 + 2*r1 + 160; r2 = r2 + r1 + 221; r1 = r1 * (r0 + 1) + 226; r1 = r1 + 2*r2 + 13; r1 = r1 + r1 + 254; r2 = r2 + 2*r1 + 117; r2 = r2 + r2 + 120; r1 = r1 * (r0 + 1) + 154; r1 = r1 * (r2 + 1) + 78; r0 = r0 * (r2 + 1) + 162; r0 = r0 + 2*r0 + 254; r2 = r2 + 2*r1 + 101; r0 = r0 + 2*r1 + 83; r2 = r2 XOR r2 XOR 189; r0 = r0 XOR r0 XOR 258; r0 = r0 XOR r1 XOR 213; r1 = r1 + 2*r2 + 258; r1 = r1 + r0 + 64; r0 = r0 + r2 + 176; r1 = r1 XOR r1 XOR 12; r1 = r1 + r2 + 117; r1 = r1 + r2 + 1; r0 = r0 * (r1 + 1) + 266; r1 = r1 * (r0 + 1) + 210; r0 = r0 + r2 + 190; r0 = r0 + 2*r1 + 52; r2 = r2 + r1 + 144; r2 = r2 + 2*r2 + 205; r1 = r1 XOR r2 XOR 255; r2 = r2 XOR r0 XOR 65; r1 = r1 XOR r2 XOR 73; r2 = r2 XOR r2 XOR 131; r2 = r2 + 2*r0 + 50; r1 = r1 + 2*r1 + 58; r0 = r0 + r1 + 23; r1 = r1 * (r1 + 1) + 168; r2 = r2 + 2*r1 + 255; r2 = r2 + 2*r1 + 181; r0 = r0 + r2 + 197; r1 = r1 + r2 + 41; r2 = r2 * (r0 + 1) + 257; r2 = r2 XOR r0 XOR 91; r2 = r2 + 2*r2 + 133; r2 = r2 + r2 + 36; r0 = r0 + r1 + 194; r0 = r0 + 2*r1 + 233; r1 = r1 + 2*r1 + 265; r1 = r1 + r1 + 197; r0 = r0 + 2*r0 + 124; r1 = r1 + 2*r0 + 0; r1 = r1 * (r0 + 1) + 132; r0 = r0 + 2*r1 + 181; r2 = r2 * (r0 + 1) + 14; r2 = r2 + 2*r2 + 107; r2 = r2 XOR r1 XOR 0; r0 = r0 XOR r2 XOR 28; r1 = r1 * (r0 + 1) + 18; r1 = r1 * (r0 + 1) + 252; r1 = r1 + r2 + 48; r0 = r0 + r1 + 189; r0 = r0 + r1 + 114; r1 = r1 + 2*r1 + 251; r1 = r1 * (r0 + 1) + 223; r1 = r1 * (r2 + 1) + 156; r1 = r1 XOR r0 XOR 188; r0 = r0 + 2*r0 + 125; r1 = r1 * (r2 + 1) + 193; r2 = r2 * (r2 + 1) + 248; r0 = r0 XOR r2 XOR 196; r0 = r0 + r1 + 83; r2 = r2 * (r1 + 1) + 185; r2 = r2 XOR r2 XOR 159; r0 = r0 XOR r1 XOR 89; r2 = r2 XOR r1 XOR 27; r0 = r0 + 2*r0 + 28; r2 = r2 * (r0 + 1) + 241. Return only the final register tuple as (r0, r1, r2).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-boolean_count-0011-b5541432bbe9
+
+- Family: `boolean_count`
+- Profile: `extreme`
+- Task hash: `5c259ead3f6871a64fe2ac86c924e2223d5d4761f0f5a50007370e2390f16b93`
+- Status: `rejected`
+- Verifier: expected '40', got ''
+- Error: none
+
+Prompt:
+
+```text
+For Boolean variables ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11'], how many assignments satisfy this CNF formula: (x5 OR x11 OR x1) AND (x6 OR x9) AND (x9 OR !x1 OR x3) AND (x8 OR !x6 OR !x10) AND (x10 OR !x11) AND (x10 OR !x7 OR !x2) AND (x5 OR !x2 OR !x4) AND (x3 OR x1 OR !x2) AND (x3 OR !x6) AND (!x2 OR !x9 OR x10) AND (x11 OR !x9) AND (x7 OR !x9 OR !x8) AND (!x7 OR !x4) AND (!x10 OR !x1 OR x0) AND (x4 OR x5) AND (!x10 OR x0 OR x11) AND (!x4 OR !x2) AND (!x5 OR x10 OR x6) AND (!x6 OR !x11) AND (!x7 OR !x8 OR !x0) AND (x11 OR x2) AND (!x1 OR x9)? Return only the integer count.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-dfa_shortest-0009-adbe03ef341a
+
+- Family: `dfa_shortest`
+- Profile: `extreme`
+- Task hash: `047c5de6c0361a5454c4d4a357c54c8849bb786cddd14f49739bf5501910321d`
+- Status: `rejected`
+- Verifier: expected 'ab', got '<empty>'
+- Error: none
+
+Prompt:
+
+```text
+Given this deterministic finite automaton, find the lexicographically first shortest word over alphabet ['a', 'b', 'c', 'd', 'e'] that takes state 5 to state 15. Transitions: 0: a->13, b->23, c->0, d->4, e->15; 1: a->2, b->1, c->23, d->20, e->22; 2: a->2, b->19, c->3, d->19, e->14; 3: a->5, b->13, c->21, d->22, e->3; 4: a->5, b->20, c->9, d->17, e->7; 5: a->16, b->11, c->1, d->16, e->2; 6: a->3, b->10, c->13, d->3, e->6; 7: a->14, b->3, c->7, d->17, e->16; 8: a->22, b->8, c->6, d->8, e->2; 9: a->12, b->12, c->12, d->17, e->15; 10: a->3, b->20, c->23, d->14, e->8; 11: a->12, b->2, c->9, d->14, e->21; 12: a->13, b->4, c->15, d->0, e->13; 13: a->19, b->16, c->5, d->1, e->5; 14: a->16, b->4, c->9, d->17, e->12; 15: a->8, b->6, c->19, d->2, e->1; 16: a->23, b->15, c->14, d->5, e->21; 17: a->23, b->22, c->11, d->19, e->21; 18: a->12, b->10, c->23, d->21, e->9; 19: a->0, b->9, c->19, d->18, e->2; 20: a->19, b->22, c->21, d->17, e->21; 21: a->14, b->17, c->19, d->11, e->12; 22: a->6, b->15, c->18, d->12, e->17; 23: a->13, b->9, c->15, d->6, e->22. Return only the word. If the empty word is correct, return <empty>.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-counterexample_search-0013-d9feb825aada
+
+- Family: `counterexample_search`
+- Profile: `extreme`
+- Task hash: `02dff0ae57bc5903d4d35efe02f5436c81503a91b72240ac0bbb63f3d04b70c8`
+- Status: `rejected`
+- Verifier: expected '4102', got ''
+- Error: none
+
+Prompt:
+
+```text
+Find the smallest integer x in [0, 5578] satisfying all constraints: (10*x + 27) mod 40 = 7; (44*x + 47) mod 69 = 31; (70*x + 62) mod 84 = 6; (7*x + 62) mod 68 = 12; (32*x + 29) mod 39 = 19. Return only x.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-string_rewrite-0014-3c42279a8d44
+
+- Family: `string_rewrite`
+- Profile: `extreme`
+- Task hash: `27858d65f884791dcb28368214cb809d1fa4727cdcb7501b7a943440750eaaf5`
+- Status: `rejected`
+- Verifier: expected '3103103103303103303130330310330', got ''
+- Error: none
+
+Prompt:
+
+```text
+Start with circular string 1032120110120010322331221333030. For each step, replace every position i simultaneously using the pair s[i]s[(i+1) mod n]. Rules: 00->3, 01->0, 02->0, 03->3, 10->0, 11->0, 12->0, 13->1, 20->3, 21->0, 22->2, 23->3, 30->0, 31->3, 32->1, 33->1. After 98 steps, what is the string? Return only the final string.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-grid_checksum-0015-6aaa43720044
+
+- Family: `grid_checksum`
+- Profile: `extreme`
+- Task hash: `3a31f77c641f10b867dc324f5f10771845a4e7ec7a16b6e9c8e7cfc3ae44f27a`
+- Status: `rejected`
+- Verifier: expected '60239', got ''
+- Error: none
+
+Prompt:
+
+```text
+On this 16x16 grid, rows are: 0 3 9 1 7 0 1 4 8 9 3 3 8 8 5 6; 8 0 7 9 5 8 1 1 1 3 8 4 4 2 7 9; 5 8 8 2 0 4 8 6 1 4 0 6 8 5 2 4; 1 4 6 4 6 3 2 4 0 9 2 3 4 5 4 4; 0 9 6 7 3 8 9 4 0 2 5 4 9 2 1 7; 7 2 8 0 8 8 2 4 4 4 6 9 8 7 6 0; 2 6 4 5 6 6 4 1 1 3 1 3 9 7 6 9; 9 2 8 6 5 9 0 1 4 6 3 7 7 0 7 8; 4 4 4 3 9 9 4 3 9 7 8 1 2 4 9 1; 1 4 4 0 6 7 7 3 8 8 6 0 0 1 9 8; 5 8 2 0 4 1 8 1 8 1 7 8 6 5 8 8; 1 5 4 2 2 1 5 5 6 6 9 1 0 1 8 8; 7 0 9 5 5 5 9 6 8 7 8 0 0 7 0 1; 4 5 4 3 4 5 6 4 8 8 2 3 2 1 3 3; 2 6 6 8 7 3 1 4 8 3 2 2 9 0 4 5; 3 2 0 1 1 6 0 9 8 8 8 9 1 8 7 1. Start at row 6, column 4. Follow moves LUULDDDUDDDDUDUUDDURRDRLLRRDURDUDDRULRRDDLDDLRLURRULDRRDDDRLUDLUDLDURRDRRLDUUDUDURURUDRDLULLDDDULLULDRUURLDUULUDRURURDDUUUDLUURRUDUDDDRLRRUDRDDDDRRLRUDDDLURLDLDDULRRLDRURRUDDRDRRRULRDDLUDDRUULLDRDLLULLLDDDDRRDLLLURLLUDUDURRLRRDRDRDLLLUDLLLLRULRULDLUDLDDL with wraparound at edges. Checksum starts at 0; after visiting each new cell, checksum = (checksum*31 + cell_value) mod 1000003. Include the starting cell before moves. Return only the final checksum integer.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-affine_mod-0016-9d8893208bd4
+
+- Family: `affine_mod`
+- Profile: `extreme`
+- Task hash: `768dd0bd73fc5880eb0e13336764b48c99d0450c68ae1083ab34a84898216973`
+- Status: `rejected`
+- Verifier: expected '(100, 201)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Work modulo 277. Let x_0 = (257, 242). For t >= 0, x_(t+1) = A x_t + b, where A = [[39, 245], [73, 73]] and b = (19, 152). What is x_275? Return only the ordered pair as two integers, like (a, b).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-dfa_shortest-0017-a689a584e755
+
+- Family: `dfa_shortest`
+- Profile: `extreme`
+- Task hash: `65c102c943c883c8663250b742eda3144acb5208bc6abb6c41f6ef75ad09d7b3`
+- Status: `rejected`
+- Verifier: expected 'bd', got '<empty>'
+- Error: none
+
+Prompt:
+
+```text
+Given this deterministic finite automaton, find the lexicographically first shortest word over alphabet ['a', 'b', 'c', 'd', 'e'] that takes state 12 to state 8. Transitions: 0: a->7, b->12, c->4, d->9, e->16; 1: a->9, b->18, c->13, d->3, e->9; 2: a->13, b->9, c->18, d->8, e->7; 3: a->17, b->3, c->0, d->7, e->19; 4: a->0, b->5, c->6, d->8, e->5; 5: a->8, b->1, c->5, d->20, e->10; 6: a->4, b->6, c->13, d->8, e->10; 7: a->18, b->18, c->10, d->17, e->17; 8: a->8, b->18, c->4, d->4, e->14; 9: a->18, b->16, c->11, d->4, e->7; 10: a->15, b->16, c->5, d->17, e->18; 11: a->6, b->19, c->7, d->16, e->10; 12: a->10, b->2, c->10, d->6, e->16; 13: a->1, b->14, c->12, d->5, e->18; 14: a->19, b->8, c->20, d->4, e->2; 15: a->0, b->9, c->13, d->18, e->9; 16: a->3, b->13, c->13, d->15, e->17; 17: a->16, b->3, c->16, d->9, e->12; 18: a->10, b->7, c->2, d->16, e->0; 19: a->11, b->14, c->14, d->14, e->8; 20: a->12, b->8, c->4, d->15, e->18. Return only the word. If the empty word is correct, return <empty>.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-boolean_count-0019-997bc740bccb
+
+- Family: `boolean_count`
+- Profile: `extreme`
+- Task hash: `dca8ebe36be1d2eccffc1930cc4074cc90e8bf08339336b11690dc5975e69c8c`
+- Status: `rejected`
+- Verifier: expected '18', got ''
+- Error: none
+
+Prompt:
+
+```text
+For Boolean variables ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11', 'x12'], how many assignments satisfy this CNF formula: (!x5 OR !x4) AND (!x5 OR !x10 OR !x4) AND (!x0 OR !x1) AND (!x4 OR !x10) AND (!x5 OR x2 OR x3) AND (x11 OR !x9) AND (x5 OR x11 OR x10) AND (!x1 OR !x9 OR x6) AND (!x1 OR !x8) AND (!x7 OR x6) AND (x4 OR !x7) AND (x5 OR x6) AND (x2 OR x11) AND (!x10 OR x6) AND (x0 OR !x11 OR x1) AND (!x6 OR x7 OR !x5) AND (x4 OR !x1) AND (!x7 OR !x6) AND (!x3 OR !x12) AND (x5 OR x9 OR !x11) AND (!x4 OR x9) AND (!x12 OR !x11) AND (x3 OR !x6) AND (x11 OR x10 OR !x1) AND (!x1 OR !x8) AND (x6 OR !x0) AND (!x4 OR !x8) AND (x7 OR !x1) AND (x8 OR !x6 OR !x12) AND (x3 OR !x12)? Return only the integer count.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-program_trace-0020-8225c070505f
+
+- Family: `program_trace`
+- Profile: `extreme`
+- Task hash: `8bd05e9150ce135fbb8c0043a02f5efc7a768e2bd7d9cfeed74b5142216e4eba`
+- Status: `rejected`
+- Verifier: expected '(179, 239, 161)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Registers r0,r1,r2 start as (138, 144, 220). Arithmetic is modulo 257. Execute these instructions in order: r0 = r0 + r2 + 33; r0 = r0 * (r2 + 1) + 107; r2 = r2 XOR r0 XOR 99; r1 = r1 + 2*r0 + 187; r0 = r0 * (r1 + 1) + 2; r0 = r0 * (r1 + 1) + 237; r0 = r0 * (r2 + 1) + 194; r0 = r0 + r0 + 131; r1 = r1 + 2*r0 + 60; r0 = r0 + 2*r2 + 178; r2 = r2 + 2*r1 + 176; r0 = r0 * (r0 + 1) + 198; r1 = r1 + 2*r2 + 83; r1 = r1 + r1 + 58; r2 = r2 XOR r1 XOR 183; r0 = r0 + 2*r1 + 62; r0 = r0 + r0 + 150; r2 = r2 + 2*r0 + 84; r0 = r0 + 2*r0 + 9; r2 = r2 * (r2 + 1) + 9; r2 = r2 + r1 + 92; r1 = r1 * (r1 + 1) + 221; r1 = r1 + r2 + 65; r1 = r1 XOR r0 XOR 8; r1 = r1 * (r2 + 1) + 117; r0 = r0 XOR r2 XOR 55; r2 = r2 XOR r2 XOR 113; r0 = r0 XOR r1 XOR 215; r2 = r2 XOR r1 XOR 188; r1 = r1 * (r1 + 1) + 44; r1 = r1 XOR r0 XOR 247; r0 = r0 * (r0 + 1) + 0; r0 = r0 XOR r2 XOR 75; r1 = r1 * (r1 + 1) + 175; r2 = r2 XOR r0 XOR 117; r0 = r0 XOR r2 XOR 243; r1 = r1 * (r2 + 1) + 223; r0 = r0 + r0 + 8; r0 = r0 * (r2 + 1) + 146; r1 = r1 * (r0 + 1) + 229; r1 = r1 XOR r0 XOR 134; r2 = r2 XOR r2 XOR 15; r2 = r2 + 2*r0 + 168; r0 = r0 + r1 + 6; r2 = r2 XOR r2 XOR 234; r0 = r0 + 2*r2 + 148; r0 = r0 XOR r2 XOR 78; r2 = r2 + r0 + 83; r1 = r1 + 2*r0 + 216; r2 = r2 * (r0 + 1) + 162; r2 = r2 XOR r2 XOR 72; r0 = r0 + 2*r1 + 40; r2 = r2 + 2*r2 + 79; r2 = r2 XOR r2 XOR 59; r2 = r2 + r1 + 28; r2 = r2 XOR r1 XOR 239; r1 = r1 XOR r2 XOR 102; r1 = r1 + 2*r2 + 2; r1 = r1 + 2*r2 + 222; r0 = r0 * (r2 + 1) + 54; r2 = r2 + r2 + 19; r0 = r0 + r2 + 246; r1 = r1 + 2*r1 + 188; r0 = r0 XOR r1 XOR 35; r0 = r0 + 2*r1 + 152; r2 = r2 XOR r0 XOR 197; r0 = r0 + 2*r0 + 123; r1 = r1 + 2*r2 + 179; r0 = r0 + r0 + 222; r1 = r1 + 2*r1 + 155; r0 = r0 + r1 + 97; r1 = r1 * (r2 + 1) + 129; r0 = r0 + r1 + 118; r0 = r0 * (r1 + 1) + 223; r1 = r1 XOR r0 XOR 99; r1 = r1 + 2*r2 + 8; r0 = r0 + 2*r1 + 220; r2 = r2 * (r2 + 1) + 52; r1 = r1 * (r1 + 1) + 44; r0 = r0 + r0 + 74; r0 = r0 XOR r1 XOR 226; r0 = r0 XOR r0 XOR 16; r2 = r2 XOR r1 XOR 46; r2 = r2 + r2 + 256; r2 = r2 XOR r1 XOR 182; r2 = r2 XOR r0 XOR 39; r1 = r1 XOR r1 XOR 79; r2 = r2 + 2*r1 + 197; r0 = r0 * (r2 + 1) + 19; r0 = r0 + 2*r0 + 111; r1 = r1 * (r1 + 1) + 140; r0 = r0 XOR r2 XOR 237; r1 = r1 + r2 + 163; r1 = r1 + r1 + 68; r0 = r0 + r0 + 175; r1 = r1 + r0 + 220; r0 = r0 + r2 + 45; r0 = r0 XOR r1 XOR 16; r2 = r2 + r2 + 148; r1 = r1 XOR r2 XOR 192; r0 = r0 + r1 + 141; r2 = r2 XOR r1 XOR 169; r1 = r1 XOR r0 XOR 208; r2 = r2 + r2 + 115; r1 = r1 + r2 + 91; r0 = r0 * (r1 + 1) + 43; r2 = r2 XOR r1 XOR 148; r0 = r0 XOR r0 XOR 135; r2 = r2 + r2 + 168; r0 = r0 + r2 + 169; r2 = r2 + r0 + 254; r0 = r0 + 2*r2 + 137. Return only the final register tuple as (r0, r1, r2).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-counterexample_search-0021-1ceabbd0ae06
+
+- Family: `counterexample_search`
+- Profile: `extreme`
+- Task hash: `2a7e195027c5caf170654a29a1e5ce39b0af3e176e908f05c79a593f729a78f0`
+- Status: `rejected`
+- Verifier: expected '2145', got ''
+- Error: none
+
+Prompt:
+
+```text
+Find the smallest integer x in [0, 6636] satisfying all constraints: (35*x + 3) mod 58 = 26; (51*x + 32) mod 52 = 19; (49*x + 35) mod 56 = 28; (6*x + 51) mod 55 = 51; (26*x + 6) mod 70 = 56. Return only x.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-string_rewrite-0022-826742549d91
+
+- Family: `string_rewrite`
+- Profile: `extreme`
+- Task hash: `c7461b92a3ccc684039015123f86ee29f22a5afdc00e739b89072b2e82148b9f`
+- Status: `rejected`
+- Verifier: expected '3231312210320303110332313030032321123313300', got ''
+- Error: none
+
+Prompt:
+
+```text
+Start with circular string 1200010110113321321231313110213130100233122. For each step, replace every position i simultaneously using the pair s[i]s[(i+1) mod n]. Rules: 00->1, 01->2, 02->2, 03->3, 10->3, 11->3, 12->3, 13->2, 20->3, 21->2, 22->2, 23->1, 30->0, 31->0, 32->1, 33->0. After 95 steps, what is the string? Return only the final string.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-grid_checksum-0023-68ee031b4ed3
+
+- Family: `grid_checksum`
+- Profile: `extreme`
+- Task hash: `b3aa9dad4b74f77fdb6ecd7e3560aa6383bf18f3891b9c99d53751c73647f3d1`
+- Status: `rejected`
+- Verifier: expected '4275', got ''
+- Error: none
+
+Prompt:
+
+```text
+On this 12x12 grid, rows are: 2 9 1 1 1 1 9 4 1 8 0 5; 4 5 3 6 1 7 2 0 2 2 2 4; 7 6 0 4 1 7 5 4 2 7 8 1; 0 9 2 3 4 9 3 0 0 9 2 0; 1 9 2 6 8 4 8 7 5 4 2 8; 9 9 9 6 2 7 6 0 9 3 3 4; 8 2 3 1 6 4 2 4 7 7 5 7; 3 7 5 7 3 4 0 0 8 9 7 5; 5 3 2 6 9 1 3 5 3 3 2 0; 7 5 7 9 8 8 3 9 1 2 8 6; 1 4 7 5 2 1 3 7 6 1 9 4; 9 9 6 2 0 5 5 8 2 8 6 4. Start at row 5, column 6. Follow moves UDUDLRDULRUDRURDUDDLRURDDURULDLUDRULRRUURRLRLDRDLLLRDULUDUDLDLLLRLRRDULLDURRDDDDRUDDULDUULDRUULURLURDUULURLLRLLUDLUDLRUURDRLLLLRULDLDRLRULURURRURLULURLLULLRLUURLRDLLRURDLDDURRDDUULUDRLRRDRUDUDDLRDDDRLDULDURRRDRUULUDDDRLLDDRLRDDDRLDUDUURDDURRRLUURRRULLLUULLLDURDRLLLDRRUUUDDDLRDDLRD with wraparound at edges. Checksum starts at 0; after visiting each new cell, checksum = (checksum*31 + cell_value) mod 1000003. Include the starting cell before moves. Return only the final checksum integer.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-affine_mod-0024-f6e3c633b5a2
+
+- Family: `affine_mod`
+- Profile: `extreme`
+- Task hash: `634b33410ab11466e73f983e7ef8b793ead90ce76ba4b8715e4f20ccd186107f`
+- Status: `rejected`
+- Verifier: expected '(44, 177)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Work modulo 271. Let x_0 = (98, 76). For t >= 0, x_(t+1) = A x_t + b, where A = [[79, 19], [251, 88]] and b = (264, 267). What is x_223? Return only the ordered pair as two integers, like (a, b).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-dfa_shortest-0025-c41899aebdae
+
+- Family: `dfa_shortest`
+- Profile: `extreme`
+- Task hash: `1dba58507e63ad1f5b0e50b6eb004853baa48c0ca0c21a0b906ef68d768a27ee`
+- Status: `rejected`
+- Verifier: expected 'ace', got '<empty>'
+- Error: none
+
+Prompt:
+
+```text
+Given this deterministic finite automaton, find the lexicographically first shortest word over alphabet ['a', 'b', 'c', 'd', 'e'] that takes state 8 to state 1. Transitions: 0: a->1, b->1, c->16, d->11, e->14; 1: a->8, b->1, c->14, d->13, e->20; 2: a->18, b->7, c->5, d->22, e->14; 3: a->21, b->0, c->1, d->23, e->12; 4: a->9, b->11, c->21, d->12, e->4; 5: a->14, b->5, c->20, d->21, e->3; 6: a->20, b->6, c->25, d->22, e->0; 7: a->9, b->1, c->25, d->10, e->0; 8: a->5, b->6, c->13, d->5, e->17; 9: a->18, b->3, c->11, d->7, e->1; 10: a->16, b->22, c->0, d->23, e->20; 11: a->18, b->6, c->24, d->12, e->22; 12: a->10, b->3, c->5, d->15, e->12; 13: a->13, b->8, c->6, d->23, e->25; 14: a->11, b->24, c->8, d->12, e->24; 15: a->3, b->4, c->24, d->8, e->5; 16: a->0, b->3, c->2, d->16, e->15; 17: a->21, b->24, c->8, d->2, e->25; 18: a->24, b->3, c->16, d->10, e->6; 19: a->23, b->14, c->0, d->21, e->1; 20: a->24, b->25, c->17, d->14, e->1; 21: a->5, b->16, c->24, d->18, e->21; 22: a->19, b->13, c->18, d->17, e->24; 23: a->13, b->16, c->2, d->18, e->20; 24: a->6, b->21, c->18, d->23, e->3; 25: a->25, b->20, c->19, d->0, e->3. Return only the word. If the empty word is correct, return <empty>.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-program_trace-0028-c76fc57635c2
+
+- Family: `program_trace`
+- Profile: `extreme`
+- Task hash: `3a124ad35d9e49b1d384704cd52def66fa0e44ac166b175a7856237639ac990f`
+- Status: `rejected`
+- Verifier: expected '(220, 13, 187)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Registers r0,r1,r2 start as (154, 197, 132). Arithmetic is modulo 251. Execute these instructions in order: r1 = r1 + r2 + 85; r1 = r1 * (r1 + 1) + 91; r0 = r0 * (r1 + 1) + 131; r1 = r1 * (r1 + 1) + 203; r0 = r0 * (r2 + 1) + 57; r2 = r2 XOR r0 XOR 160; r2 = r2 * (r1 + 1) + 120; r0 = r0 * (r2 + 1) + 39; r2 = r2 * (r1 + 1) + 182; r0 = r0 + 2*r1 + 167; r2 = r2 + r0 + 162; r0 = r0 + 2*r1 + 135; r0 = r0 + r1 + 182; r0 = r0 XOR r1 XOR 41; r0 = r0 + 2*r2 + 35; r1 = r1 + 2*r1 + 8; r2 = r2 + 2*r1 + 84; r1 = r1 * (r0 + 1) + 167; r1 = r1 XOR r1 XOR 82; r2 = r2 XOR r0 XOR 175; r0 = r0 * (r2 + 1) + 137; r2 = r2 * (r0 + 1) + 132; r1 = r1 + 2*r2 + 180; r2 = r2 XOR r1 XOR 246; r1 = r1 XOR r2 XOR 70; r2 = r2 + 2*r1 + 22; r1 = r1 * (r2 + 1) + 25; r1 = r1 + 2*r0 + 237; r2 = r2 XOR r2 XOR 223; r1 = r1 + r2 + 138; r0 = r0 + r1 + 100; r0 = r0 + r2 + 22; r1 = r1 + r0 + 160; r1 = r1 + 2*r0 + 244; r2 = r2 + r2 + 157; r0 = r0 XOR r1 XOR 16; r1 = r1 + r1 + 95; r1 = r1 * (r1 + 1) + 58; r1 = r1 + r2 + 152; r2 = r2 + 2*r0 + 118; r0 = r0 XOR r2 XOR 21; r0 = r0 + r1 + 223; r1 = r1 * (r1 + 1) + 24; r2 = r2 * (r1 + 1) + 138; r2 = r2 + 2*r2 + 190; r1 = r1 + r2 + 177; r2 = r2 + r1 + 1; r2 = r2 + 2*r0 + 112; r2 = r2 + 2*r0 + 47; r1 = r1 XOR r1 XOR 74; r1 = r1 * (r2 + 1) + 32; r1 = r1 + 2*r0 + 26; r0 = r0 * (r0 + 1) + 186; r2 = r2 * (r1 + 1) + 112; r0 = r0 + 2*r2 + 79; r2 = r2 + 2*r2 + 40; r2 = r2 * (r1 + 1) + 227; r0 = r0 * (r0 + 1) + 131; r1 = r1 XOR r0 XOR 230; r0 = r0 + 2*r2 + 10; r2 = r2 * (r2 + 1) + 22; r0 = r0 + r2 + 120; r1 = r1 + 2*r2 + 27; r2 = r2 * (r0 + 1) + 117; r2 = r2 * (r2 + 1) + 175; r2 = r2 + 2*r1 + 1; r2 = r2 XOR r1 XOR 124; r1 = r1 XOR r1 XOR 237; r0 = r0 XOR r2 XOR 54; r0 = r0 XOR r2 XOR 29; r2 = r2 + 2*r2 + 213; r0 = r0 * (r1 + 1) + 44; r1 = r1 XOR r1 XOR 204; r1 = r1 * (r1 + 1) + 10; r1 = r1 + 2*r0 + 243; r0 = r0 XOR r0 XOR 85; r0 = r0 * (r1 + 1) + 183; r1 = r1 XOR r1 XOR 70; r1 = r1 * (r0 + 1) + 184; r2 = r2 * (r1 + 1) + 59; r2 = r2 + r1 + 23; r0 = r0 + r0 + 228; r0 = r0 XOR r0 XOR 100; r1 = r1 XOR r2 XOR 48; r2 = r2 XOR r2 XOR 80; r0 = r0 + r1 + 24; r2 = r2 + r0 + 41; r0 = r0 XOR r1 XOR 178; r0 = r0 + r2 + 168; r1 = r1 + 2*r0 + 226; r2 = r2 * (r2 + 1) + 40; r1 = r1 XOR r1 XOR 190; r0 = r0 XOR r1 XOR 129; r1 = r1 + r0 + 146; r2 = r2 XOR r1 XOR 30; r0 = r0 XOR r0 XOR 25; r1 = r1 + 2*r1 + 210; r1 = r1 + 2*r2 + 131; r0 = r0 * (r0 + 1) + 178; r1 = r1 XOR r2 XOR 204; r2 = r2 * (r0 + 1) + 219; r1 = r1 * (r2 + 1) + 115; r2 = r2 + 2*r0 + 225; r2 = r2 XOR r0 XOR 213; r0 = r0 * (r0 + 1) + 145; r2 = r2 * (r2 + 1) + 51; r0 = r0 XOR r0 XOR 97; r0 = r0 + 2*r2 + 154; r1 = r1 + r0 + 128; r1 = r1 * (r2 + 1) + 190; r0 = r0 + r1 + 212; r1 = r1 + r1 + 200; r1 = r1 XOR r1 XOR 75; r2 = r2 * (r2 + 1) + 46; r2 = r2 * (r1 + 1) + 198; r2 = r2 XOR r0 XOR 204; r2 = r2 + r1 + 6; r1 = r1 XOR r0 XOR 40; r2 = r2 + r2 + 121; r1 = r1 * (r1 + 1) + 190; r2 = r2 * (r0 + 1) + 98; r2 = r2 + 2*r1 + 234; r0 = r0 + r1 + 130; r2 = r2 XOR r0 XOR 29; r2 = r2 + r0 + 184; r1 = r1 + r0 + 194; r0 = r0 + r1 + 142; r1 = r1 * (r2 + 1) + 215; r1 = r1 * (r0 + 1) + 106; r1 = r1 * (r1 + 1) + 19; r1 = r1 + 2*r2 + 142; r1 = r1 XOR r2 XOR 180; r1 = r1 + 2*r0 + 127; r1 = r1 + r2 + 87; r0 = r0 + r2 + 179; r1 = r1 XOR r0 XOR 181; r1 = r1 + r2 + 98. Return only the final register tuple as (r0, r1, r2).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-boolean_count-0027-0594412c4e4a
+
+- Family: `boolean_count`
+- Profile: `extreme`
+- Task hash: `98fba5885be441a96ca4b313cfdaadcfb9f75a3555b4e19142335119c6c1882d`
+- Status: `rejected`
+- Verifier: expected '191', got ''
+- Error: none
+
+Prompt:
+
+```text
+For Boolean variables ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11', 'x12', 'x13'], how many assignments satisfy this CNF formula: (!x12 OR !x3) AND (!x6 OR x2) AND (!x1 OR !x6 OR x10) AND (x0 OR x10 OR x8) AND (!x0 OR !x1) AND (!x10 OR x4 OR !x3) AND (!x13 OR x11) AND (!x3 OR !x10 OR !x1) AND (!x3 OR x0) AND (x13 OR !x11 OR x3) AND (x11 OR x13 OR x10) AND (x10 OR !x9 OR !x12) AND (x2 OR !x1) AND (x7 OR x13 OR x8) AND (!x1 OR !x8 OR !x12) AND (x2 OR !x12 OR x7) AND (!x4 OR !x0 OR !x9) AND (x3 OR !x9) AND (!x5 OR !x13 OR x6) AND (x4 OR x9) AND (!x10 OR !x8 OR x1) AND (x13 OR !x2 OR x5) AND (x2 OR x4 OR x0)? Return only the integer count.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-counterexample_search-0029-0bea0a8f6eeb
+
+- Family: `counterexample_search`
+- Profile: `extreme`
+- Task hash: `bf84febfec8750f8c5a871f3c5e70e78d7082b5dc9718d7348fbf22ab2e9d0bf`
+- Status: `rejected`
+- Verifier: expected '6085', got ''
+- Error: none
+
+Prompt:
+
+```text
+Find the smallest integer x in [0, 12525] satisfying all constraints: (45*x + 0) mod 80 = 65; (11*x + 39) mod 65 = 24; (30*x + 54) mod 57 = 33; (27*x + 20) mod 62 = 15; (20*x + 58) mod 90 = 78. Return only x.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-string_rewrite-0030-3f2050c950fd
+
+- Family: `string_rewrite`
+- Profile: `extreme`
+- Task hash: `f27117292e25815747107d8c45daf9634f34a63ee75507f3a6b46cf1632b13bd`
+- Status: `rejected`
+- Verifier: expected '00032032003200323200320000003232032', got ''
+- Error: none
+
+Prompt:
+
+```text
+Start with circular string 33323301032021011002010003320122322. For each step, replace every position i simultaneously using the pair s[i]s[(i+1) mod n]. Rules: 00->0, 01->1, 02->2, 03->0, 10->3, 11->3, 12->1, 13->2, 20->2, 21->3, 22->3, 23->2, 30->2, 31->3, 32->3, 33->0. After 113 steps, what is the string? Return only the final string.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-grid_checksum-0031-3c93397d0031
+
+- Family: `grid_checksum`
+- Profile: `extreme`
+- Task hash: `fda1b63781ed511d2ee0c3bbc74484e5860094e7726f543a1d752945330847e0`
+- Status: `rejected`
+- Verifier: expected '755228', got ''
+- Error: none
+
+Prompt:
+
+```text
+On this 14x14 grid, rows are: 2 3 0 0 8 6 2 6 3 1 9 7 9 6; 3 9 5 6 5 3 4 6 9 0 0 7 9 5; 2 3 3 7 2 4 1 2 0 9 8 0 5 0; 6 2 3 1 0 1 3 7 3 4 1 9 6 1; 1 8 1 2 3 6 9 1 4 3 7 9 3 1; 6 7 8 1 7 1 1 3 7 8 6 0 6 6; 0 1 1 3 3 0 7 8 0 1 0 2 7 7; 2 6 4 9 3 6 9 7 6 1 7 9 3 6; 2 8 2 6 5 2 2 6 0 8 8 7 1 4; 6 7 0 5 4 5 2 7 3 1 0 7 6 0; 8 5 1 8 4 0 5 5 8 3 3 5 4 1; 7 3 4 9 1 5 1 5 3 1 8 6 7 2; 4 5 4 6 2 6 7 5 2 1 4 3 0 6; 9 8 5 6 0 5 3 3 4 0 4 6 5 3. Start at row 7, column 0. Follow moves LLRDLUDDRRURULDLLLDLLLDDDDLRUDDRRLLLLDDUULLRDDRDLRRRLLDRURLRLLRULUDRUDDURDURRRLUDDULRULULLURDULRRRLRLDLLDRLDDDDLLRURDLULRLRLRURDDLRRDUURRDLUULDUDUUURLULLLDRRULDDRDULDLRRLLRDRDLRLDURRLLLDDRURRUDLLRDDRDLUUURURDUULLLLDDULDDRRDLDRDDLLRLRURDD with wraparound at edges. Checksum starts at 0; after visiting each new cell, checksum = (checksum*31 + cell_value) mod 1000003. Include the starting cell before moves. Return only the final checksum integer.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-affine_mod-0032-ee2169c7dfc0
+
+- Family: `affine_mod`
+- Profile: `extreme`
+- Task hash: `dbbcc6a82248d0f92056198e3f655bca2babdc89383ba611d7d709c10dd83258`
+- Status: `rejected`
+- Verifier: expected '(179, 16)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Work modulo 271. Let x_0 = (41, 127). For t >= 0, x_(t+1) = A x_t + b, where A = [[79, 89], [159, 157]] and b = (236, 178). What is x_190? Return only the ordered pair as two integers, like (a, b).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-dfa_shortest-0033-8607a6a82465
+
+- Family: `dfa_shortest`
+- Profile: `extreme`
+- Task hash: `98e8a97fdd6544c75b6c03038facc6228acfd068bd02aae0f73d9aad782055f1`
+- Status: `rejected`
+- Verifier: expected 'ee', got '<empty>'
+- Error: none
+
+Prompt:
+
+```text
+Given this deterministic finite automaton, find the lexicographically first shortest word over alphabet ['a', 'b', 'c', 'd', 'e'] that takes state 3 to state 4. Transitions: 0: a->15, b->14, c->12, d->16, e->6; 1: a->18, b->10, c->14, d->8, e->8; 2: a->9, b->20, c->14, d->19, e->14; 3: a->22, b->5, c->22, d->9, e->16; 4: a->12, b->19, c->5, d->19, e->4; 5: a->20, b->17, c->18, d->8, e->22; 6: a->10, b->0, c->20, d->7, e->2; 7: a->20, b->16, c->2, d->15, e->0; 8: a->15, b->14, c->19, d->6, e->15; 9: a->21, b->9, c->8, d->3, e->16; 10: a->14, b->3, c->14, d->13, e->20; 11: a->16, b->22, c->20, d->3, e->10; 12: a->21, b->6, c->11, d->14, e->6; 13: a->8, b->13, c->8, d->17, e->18; 14: a->1, b->17, c->10, d->6, e->9; 15: a->19, b->14, c->19, d->10, e->1; 16: a->17, b->19, c->2, d->6, e->4; 17: a->18, b->13, c->5, d->9, e->3; 18: a->12, b->6, c->17, d->15, e->7; 19: a->1, b->12, c->18, d->10, e->19; 20: a->17, b->22, c->2, d->12, e->15; 21: a->0, b->20, c->18, d->3, e->10; 22: a->21, b->16, c->21, d->16, e->6. Return only the word. If the empty word is correct, return <empty>.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-program_trace-0036-84c7c3a080b2
+
+- Family: `program_trace`
+- Profile: `extreme`
+- Task hash: `7532e6d3f6a5b13fc1ca0a32f5eff78f47cbb5945117230a91d5f28e69e9ba7d`
+- Status: `rejected`
+- Verifier: expected '(220, 105, 194)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Registers r0,r1,r2 start as (130, 68, 104). Arithmetic is modulo 257. Execute these instructions in order: r0 = r0 * (r2 + 1) + 242; r0 = r0 * (r2 + 1) + 114; r2 = r2 * (r2 + 1) + 165; r1 = r1 XOR r1 XOR 168; r2 = r2 * (r2 + 1) + 140; r2 = r2 + 2*r1 + 133; r2 = r2 + r0 + 52; r0 = r0 * (r0 + 1) + 112; r0 = r0 + 2*r1 + 71; r0 = r0 * (r0 + 1) + 213; r1 = r1 XOR r0 XOR 99; r0 = r0 * (r2 + 1) + 208; r0 = r0 * (r1 + 1) + 147; r2 = r2 * (r0 + 1) + 227; r2 = r2 + r0 + 182; r1 = r1 + r0 + 185; r0 = r0 XOR r1 XOR 6; r0 = r0 + 2*r0 + 139; r0 = r0 XOR r1 XOR 80; r0 = r0 XOR r1 XOR 227; r1 = r1 * (r2 + 1) + 56; r2 = r2 XOR r0 XOR 65; r1 = r1 + 2*r0 + 11; r2 = r2 + 2*r2 + 13; r1 = r1 * (r0 + 1) + 254; r0 = r0 XOR r1 XOR 63; r0 = r0 + 2*r0 + 49; r1 = r1 + 2*r0 + 89; r2 = r2 XOR r1 XOR 140; r0 = r0 + r2 + 217; r2 = r2 + 2*r2 + 135; r2 = r2 XOR r2 XOR 226; r0 = r0 + r0 + 195; r2 = r2 XOR r2 XOR 148; r1 = r1 XOR r1 XOR 69; r0 = r0 + r1 + 33; r0 = r0 XOR r2 XOR 32; r1 = r1 + 2*r2 + 107; r0 = r0 * (r0 + 1) + 248; r1 = r1 XOR r0 XOR 146; r2 = r2 + r2 + 49; r1 = r1 * (r1 + 1) + 238; r0 = r0 XOR r1 XOR 160; r1 = r1 XOR r1 XOR 22; r2 = r2 + r2 + 106; r0 = r0 XOR r1 XOR 45; r0 = r0 + r0 + 199; r2 = r2 + r1 + 206; r2 = r2 + 2*r0 + 149; r2 = r2 + 2*r0 + 227; r0 = r0 XOR r1 XOR 38; r0 = r0 * (r1 + 1) + 103; r1 = r1 XOR r1 XOR 22; r1 = r1 + r2 + 212; r0 = r0 XOR r0 XOR 64; r0 = r0 + r1 + 97; r2 = r2 + 2*r0 + 45; r0 = r0 + r1 + 209; r2 = r2 + 2*r0 + 102; r1 = r1 XOR r2 XOR 245; r1 = r1 * (r1 + 1) + 130; r2 = r2 + 2*r2 + 162; r1 = r1 * (r1 + 1) + 7; r0 = r0 + 2*r2 + 255; r0 = r0 * (r0 + 1) + 193; r2 = r2 + r2 + 235; r1 = r1 XOR r0 XOR 207; r0 = r0 + 2*r2 + 209; r2 = r2 * (r1 + 1) + 44; r1 = r1 XOR r2 XOR 190; r1 = r1 + r2 + 107; r1 = r1 + r2 + 96; r1 = r1 * (r1 + 1) + 169; r0 = r0 + r2 + 85; r1 = r1 * (r0 + 1) + 5; r2 = r2 + 2*r0 + 159; r0 = r0 * (r2 + 1) + 122; r0 = r0 + r0 + 238; r1 = r1 + r0 + 6; r2 = r2 + r0 + 235; r0 = r0 XOR r0 XOR 188; r2 = r2 * (r2 + 1) + 40; r2 = r2 + 2*r0 + 181; r2 = r2 + r1 + 78; r1 = r1 * (r1 + 1) + 47; r2 = r2 + r2 + 254; r1 = r1 * (r0 + 1) + 123; r0 = r0 * (r1 + 1) + 51; r2 = r2 + 2*r0 + 97; r2 = r2 + 2*r2 + 88; r1 = r1 + r0 + 210; r0 = r0 * (r0 + 1) + 182; r1 = r1 * (r0 + 1) + 192; r0 = r0 + r0 + 165; r2 = r2 + r2 + 122; r1 = r1 + r1 + 19; r2 = r2 + 2*r0 + 151; r2 = r2 * (r0 + 1) + 159; r0 = r0 XOR r0 XOR 36; r2 = r2 XOR r2 XOR 76; r2 = r2 XOR r1 XOR 85; r1 = r1 + 2*r1 + 194; r0 = r0 * (r0 + 1) + 113; r1 = r1 + r0 + 209; r0 = r0 * (r1 + 1) + 19; r1 = r1 XOR r1 XOR 21; r2 = r2 XOR r0 XOR 45; r1 = r1 * (r1 + 1) + 91; r2 = r2 * (r1 + 1) + 250; r1 = r1 + r0 + 108; r1 = r1 + r1 + 23; r2 = r2 * (r2 + 1) + 9; r0 = r0 XOR r0 XOR 220. Return only the final register tuple as (r0, r1, r2).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-boolean_count-0035-3fa77bec69af
+
+- Family: `boolean_count`
+- Profile: `extreme`
+- Task hash: `7e296d1f789bc742517a26ec83dab4175f88ff6674741febd7b3ced0244bbb8d`
+- Status: `rejected`
+- Verifier: expected '10', got ''
+- Error: none
+
+Prompt:
+
+```text
+For Boolean variables ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11'], how many assignments satisfy this CNF formula: (x8 OR x4) AND (x3 OR !x8) AND (!x9 OR !x4 OR !x5) AND (!x2 OR x4 OR !x5) AND (x0 OR !x10) AND (!x0 OR !x10) AND (x2 OR !x1) AND (x4 OR x8) AND (!x5 OR !x6) AND (x7 OR x1 OR x0) AND (x9 OR !x5 OR x6) AND (x8 OR x2) AND (x3 OR x0) AND (x7 OR x6 OR !x8) AND (x9 OR !x5) AND (x6 OR !x8) AND (x5 OR x0 OR x6) AND (x11 OR x8 OR x9) AND (x9 OR !x8 OR x11) AND (x7 OR !x8 OR x3) AND (x0 OR x10) AND (x0 OR x3 OR x1) AND (x0 OR !x1) AND (x4 OR x10 OR !x0) AND (!x7 OR x5 OR !x1) AND (!x6 OR x5 OR !x1) AND (x8 OR x11) AND (x1 OR !x7) AND (!x7 OR x6 OR x5) AND (!x4 OR !x1) AND (!x1 OR !x0) AND (!x11 OR x3 OR !x9) AND (!x7 OR !x0) AND (!x11 OR !x0 OR x2)? Return only the integer count.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-counterexample_search-0037-cf9c23a0c296
+
+- Family: `counterexample_search`
+- Profile: `extreme`
+- Task hash: `90d8c0051a1d99529f806e788800ae0a286ff7e4fcbd46038fbb685258d190ae`
+- Status: `rejected`
+- Verifier: expected '5745', got ''
+- Error: none
+
+Prompt:
+
+```text
+Find the smallest integer x in [0, 7828] satisfying all constraints: (62*x + 30) mod 85 = 70; (23*x + 28) mod 31 = 10; (30*x + 61) mod 94 = 15; (15*x + 30) mod 70 = 35; (21*x + 59) mod 71 = 4. Return only x.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-string_rewrite-0038-71094e956c40
+
+- Family: `string_rewrite`
+- Profile: `extreme`
+- Task hash: `ab84b8937357bbb5e59d602b8ac850cff44d2204af6caf6fe8034330576f3555`
+- Status: `rejected`
+- Verifier: expected '000133211220101323332332322201001001', got ''
+- Error: none
+
+Prompt:
+
+```text
+Start with circular string 322020320102302112123032233323322202. For each step, replace every position i simultaneously using the pair s[i]s[(i+1) mod n]. Rules: 00->1, 01->2, 02->0, 03->1, 10->2, 11->3, 12->2, 13->2, 20->2, 21->3, 22->3, 23->0, 30->3, 31->0, 32->1, 33->0. After 130 steps, what is the string? Return only the final string.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-grid_checksum-0039-45ce092cde40
+
+- Family: `grid_checksum`
+- Profile: `extreme`
+- Task hash: `c8baea391b1abecddeeca35ea0a3a598d9f6feb627e530e613a83648a08b8081`
+- Status: `rejected`
+- Verifier: expected '828696', got ''
+- Error: none
+
+Prompt:
+
+```text
+On this 16x16 grid, rows are: 8 4 1 2 7 4 7 1 8 2 1 8 9 3 6 7; 9 9 0 2 7 7 5 4 1 4 2 9 0 5 0 3; 1 2 8 1 5 2 0 8 1 4 9 1 3 9 1 6; 2 4 6 7 2 7 5 0 1 5 7 3 5 5 7 7; 8 8 8 8 4 1 8 9 5 7 3 9 1 5 1 6; 0 1 4 3 1 4 7 2 7 8 3 8 9 9 2 1; 4 9 9 2 2 4 0 9 5 5 9 1 0 0 5 1; 9 1 9 8 8 5 7 6 5 7 8 1 7 0 3 7; 5 7 4 8 8 9 5 7 4 1 5 8 7 1 5 7; 0 7 5 6 2 7 3 1 6 9 2 2 1 0 5 7; 6 5 9 4 5 0 2 3 4 0 3 1 4 7 3 2; 5 9 5 9 9 4 5 2 0 9 4 8 5 6 5 8; 4 4 9 8 3 2 2 3 9 8 4 2 2 5 8 4; 8 7 1 0 0 1 7 0 1 4 4 9 9 7 6 8; 8 5 6 9 5 2 2 4 7 5 4 3 3 9 6 8; 2 2 3 2 1 4 9 7 4 3 0 3 1 4 6 3. Start at row 10, column 1. Follow moves DLLURURDDLULRRULLLRDRDULDUURDULDDUUDDRUDRDDRDUUDLRLLLRRLDURLULDUUDDUDLLRLRDDDUURUDULLDLRRUDUDDDRUDUDDRDUDUURDDDRDURLDDRURLDLRRRDRRDUURDLURRLLLUDUDLRRLLDURLRRDLURRUUULUDLURRRRLURDLURRDULUDRRDDURDURUULRRUUUDUDLRUDRRRLDRDDRLURULDRRDDLURULLDRUDLRUUDULURURLRLDRLLUULUDRDUDDLDRUUUULLURUDLLDDLRLRURUDULLUULDU with wraparound at edges. Checksum starts at 0; after visiting each new cell, checksum = (checksum*31 + cell_value) mod 1000003. Include the starting cell before moves. Return only the final checksum integer.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-affine_mod-0040-1e55892f8339
+
+- Family: `affine_mod`
+- Profile: `extreme`
+- Task hash: `24eeb2db721f968e9adae4d9ce34c4c7ce8bf18f7d49d5896984a4cb60c51960`
+- Status: `rejected`
+- Verifier: expected '(158, 45)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Work modulo 269. Let x_0 = (135, 93). For t >= 0, x_(t+1) = A x_t + b, where A = [[106, 21], [39, 127]] and b = (47, 27). What is x_375? Return only the ordered pair as two integers, like (a, b).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-dfa_shortest-0041-a4e611cd7c01
+
+- Family: `dfa_shortest`
+- Profile: `extreme`
+- Task hash: `e4e30169452acb2e3f21d5ee3cb824655a42e66aeb40118ff1059bbb48459997`
+- Status: `rejected`
+- Verifier: expected 'aba', got '<empty>'
+- Error: none
+
+Prompt:
+
+```text
+Given this deterministic finite automaton, find the lexicographically first shortest word over alphabet ['a', 'b', 'c', 'd', 'e'] that takes state 13 to state 5. Transitions: 0: a->14, b->23, c->15, d->16, e->14; 1: a->8, b->14, c->7, d->15, e->0; 2: a->8, b->10, c->12, d->14, e->16; 3: a->9, b->14, c->23, d->11, e->13; 4: a->13, b->19, c->4, d->3, e->22; 5: a->9, b->14, c->12, d->7, e->23; 6: a->22, b->2, c->19, d->15, e->7; 7: a->13, b->14, c->23, d->19, e->10; 8: a->5, b->3, c->13, d->23, e->3; 9: a->17, b->6, c->0, d->3, e->21; 10: a->22, b->8, c->22, d->20, e->1; 11: a->8, b->22, c->23, d->3, e->10; 12: a->10, b->1, c->16, d->8, e->18; 13: a->10, b->23, c->6, d->21, e->15; 14: a->22, b->15, c->15, d->15, e->11; 15: a->8, b->15, c->2, d->21, e->21; 16: a->0, b->20, c->5, d->17, e->9; 17: a->9, b->11, c->3, d->16, e->15; 18: a->22, b->14, c->7, d->18, e->7; 19: a->6, b->10, c->22, d->8, e->12; 20: a->2, b->20, c->20, d->1, e->16; 21: a->21, b->2, c->23, d->17, e->7; 22: a->20, b->6, c->2, d->15, e->4; 23: a->20, b->0, c->16, d->8, e->12. Return only the word. If the empty word is correct, return <empty>.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-boolean_count-0043-cf3938d735dc
+
+- Family: `boolean_count`
+- Profile: `extreme`
+- Task hash: `ece765209ed48271c07f3c50af34166943798e79ad1920ed06218192496ac497`
+- Status: `rejected`
+- Verifier: expected '46', got ''
+- Error: none
+
+Prompt:
+
+```text
+For Boolean variables ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11', 'x12', 'x13'], how many assignments satisfy this CNF formula: (!x8 OR !x0) AND (!x0 OR !x12) AND (!x3 OR !x2 OR !x5) AND (x13 OR x4 OR x10) AND (x5 OR x10) AND (!x0 OR x3) AND (!x13 OR x6) AND (!x12 OR x11 OR !x8) AND (!x8 OR !x6 OR !x13) AND (x1 OR x3) AND (x12 OR !x11) AND (x5 OR x10 OR !x4) AND (x13 OR x4 OR x3) AND (!x7 OR x3 OR x13) AND (x4 OR x5) AND (x6 OR !x1 OR !x11) AND (!x10 OR !x13 OR !x11) AND (x11 OR !x8 OR x9) AND (x7 OR !x3) AND (x10 OR x8 OR !x5) AND (x6 OR !x1 OR !x7) AND (x3 OR x11 OR !x10) AND (x13 OR x2) AND (!x5 OR !x3) AND (x10 OR !x9 OR !x6) AND (x13 OR !x1)? Return only the integer count.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-program_trace-0044-8f8659717a80
+
+- Family: `program_trace`
+- Profile: `extreme`
+- Task hash: `adb6f9674c549233a4df7121a57e8c9df0fe991bddad9bec64c97ef2a0aca6bf`
+- Status: `rejected`
+- Verifier: expected '(153, 232, 154)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Registers r0,r1,r2 start as (120, 88, 232). Arithmetic is modulo 257. Execute these instructions in order: r0 = r0 + r1 + 241; r0 = r0 XOR r1 XOR 104; r1 = r1 + r2 + 202; r2 = r2 + 2*r0 + 152; r2 = r2 + r1 + 48; r0 = r0 + r1 + 43; r2 = r2 + r1 + 71; r1 = r1 + 2*r1 + 142; r1 = r1 XOR r1 XOR 68; r0 = r0 XOR r0 XOR 148; r2 = r2 * (r2 + 1) + 214; r2 = r2 + 2*r0 + 182; r1 = r1 + 2*r2 + 32; r2 = r2 XOR r0 XOR 31; r2 = r2 * (r2 + 1) + 40; r1 = r1 + r1 + 181; r1 = r1 + 2*r0 + 25; r0 = r0 + r2 + 54; r1 = r1 * (r1 + 1) + 180; r2 = r2 XOR r2 XOR 145; r0 = r0 * (r2 + 1) + 127; r0 = r0 + r2 + 185; r1 = r1 + 2*r0 + 1; r1 = r1 + 2*r2 + 26; r0 = r0 * (r1 + 1) + 46; r0 = r0 XOR r2 XOR 184; r2 = r2 * (r0 + 1) + 171; r0 = r0 * (r0 + 1) + 184; r2 = r2 + 2*r0 + 52; r0 = r0 + 2*r0 + 141; r0 = r0 + r0 + 191; r0 = r0 + r0 + 237; r1 = r1 XOR r1 XOR 161; r2 = r2 + r0 + 106; r1 = r1 + r0 + 94; r0 = r0 * (r1 + 1) + 139; r1 = r1 + r1 + 123; r2 = r2 * (r0 + 1) + 14; r0 = r0 * (r0 + 1) + 41; r1 = r1 + 2*r2 + 23; r0 = r0 XOR r1 XOR 65; r2 = r2 + 2*r0 + 206; r1 = r1 * (r1 + 1) + 208; r2 = r2 XOR r0 XOR 194; r2 = r2 + r2 + 245; r0 = r0 + 2*r1 + 50; r1 = r1 XOR r2 XOR 3; r2 = r2 + 2*r2 + 174; r0 = r0 XOR r1 XOR 164; r2 = r2 * (r0 + 1) + 178; r1 = r1 + 2*r2 + 249; r0 = r0 + r0 + 215; r0 = r0 + r1 + 129; r2 = r2 + 2*r0 + 185; r1 = r1 + 2*r1 + 200; r0 = r0 * (r2 + 1) + 122; r2 = r2 * (r0 + 1) + 102; r0 = r0 XOR r1 XOR 238; r2 = r2 + r1 + 53; r0 = r0 XOR r0 XOR 106; r1 = r1 XOR r2 XOR 29; r0 = r0 * (r1 + 1) + 83; r1 = r1 * (r2 + 1) + 221; r1 = r1 + r0 + 231; r0 = r0 + 2*r1 + 232; r2 = r2 + r1 + 153; r1 = r1 * (r1 + 1) + 240; r0 = r0 + 2*r2 + 221; r1 = r1 * (r0 + 1) + 20; r0 = r0 + 2*r0 + 174; r0 = r0 * (r1 + 1) + 151; r2 = r2 + 2*r1 + 92; r2 = r2 + 2*r0 + 92; r1 = r1 * (r0 + 1) + 83; r2 = r2 + r2 + 167; r1 = r1 + r1 + 111; r2 = r2 * (r1 + 1) + 176; r2 = r2 * (r0 + 1) + 43; r2 = r2 + 2*r1 + 46; r1 = r1 * (r1 + 1) + 39; r1 = r1 + r1 + 65; r2 = r2 XOR r2 XOR 2; r2 = r2 * (r0 + 1) + 81; r2 = r2 + 2*r0 + 22; r0 = r0 + r1 + 74; r2 = r2 * (r0 + 1) + 39; r1 = r1 * (r0 + 1) + 218; r1 = r1 * (r2 + 1) + 175; r2 = r2 * (r1 + 1) + 119; r1 = r1 XOR r0 XOR 81; r0 = r0 + r0 + 164; r0 = r0 * (r1 + 1) + 145; r1 = r1 XOR r1 XOR 80; r2 = r2 XOR r0 XOR 53; r0 = r0 + r0 + 112; r2 = r2 * (r1 + 1) + 146; r0 = r0 + r2 + 63; r1 = r1 XOR r1 XOR 199; r2 = r2 + 2*r0 + 17; r0 = r0 + 2*r0 + 152; r0 = r0 * (r0 + 1) + 53; r2 = r2 * (r0 + 1) + 69; r2 = r2 XOR r2 XOR 200; r0 = r0 + 2*r1 + 249; r1 = r1 XOR r1 XOR 51; r1 = r1 * (r1 + 1) + 110; r2 = r2 + 2*r2 + 227; r0 = r0 + r2 + 233; r2 = r2 + 2*r0 + 137; r2 = r2 + r2 + 54; r2 = r2 + r2 + 213; r0 = r0 + 2*r1 + 142; r1 = r1 + 2*r1 + 124; r0 = r0 * (r2 + 1) + 6; r1 = r1 * (r1 + 1) + 145. Return only the final register tuple as (r0, r1, r2).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-string_rewrite-0046-a139f4780999
+
+- Family: `string_rewrite`
+- Profile: `extreme`
+- Task hash: `99061e472eded0ae3f47f8946c1eaf2b3327931fc163a4d67a4e57ffe5116f68`
+- Status: `rejected`
+- Verifier: expected '00303030303030303030303030303', got ''
+- Error: none
+
+Prompt:
+
+```text
+Start with circular string 23010213131231030033032013002. For each step, replace every position i simultaneously using the pair s[i]s[(i+1) mod n]. Rules: 00->0, 01->3, 02->0, 03->0, 10->0, 11->1, 12->0, 13->0, 20->1, 21->1, 22->1, 23->3, 30->3, 31->3, 32->1, 33->1. After 102 steps, what is the string? Return only the final string.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-grid_checksum-0047-42912c758933
+
+- Family: `grid_checksum`
+- Profile: `extreme`
+- Task hash: `9badadfc332f8b64bad4fe444b922f1afc881a5236bd5c373853cbae9ed06459`
+- Status: `rejected`
+- Verifier: expected '111484', got ''
+- Error: none
+
+Prompt:
+
+```text
+On this 12x12 grid, rows are: 5 8 5 5 1 8 1 7 9 4 8 9; 3 3 5 5 1 6 6 0 6 2 6 2; 2 1 1 1 6 9 3 3 1 2 2 1; 9 4 1 0 4 3 3 3 7 3 3 4; 3 0 0 3 4 5 2 5 7 9 5 9; 2 3 0 7 0 6 6 3 0 5 3 9; 6 4 5 1 7 4 6 6 6 2 7 2; 1 4 8 9 8 5 1 3 6 6 0 2; 9 8 9 1 0 5 8 0 0 4 4 5; 9 2 1 1 4 8 9 0 7 7 9 7; 4 7 5 7 6 4 0 5 1 3 5 9; 6 3 1 7 5 2 2 6 9 9 3 0. Start at row 8, column 10. Follow moves DULLLDULUDRDLDURLDLRLRDRDDRLLLLRLDDULLUUDDURLURLLDDLULRLUUUDULDLLDUUDDUDLURLUDRLRUUDLDLUDRRRLDDDUURDDULLLLRUDDDRURRUUDLUDRRDDUULDULDULURRUDLDDRUUDRULDLRDLLLDDDRDDDDUURDLURRDUDLLLRDLLRRURDRRRUDRLRLDRDDUDUDRRRRLLRLDUUUDLLUDRLLLDLDLURLDDUUUDDLDLRDLRRDLLLUDLRUULULLLRUDRUDLUURDLULUDLLDDDUUDDRDDULLLDR with wraparound at edges. Checksum starts at 0; after visiting each new cell, checksum = (checksum*31 + cell_value) mod 1000003. Include the starting cell before moves. Return only the final checksum integer.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-affine_mod-0048-e8204e48c429
+
+- Family: `affine_mod`
+- Profile: `extreme`
+- Task hash: `c859fbf262eb10568017784962e4f0e4aeb0152cde3188938c391705243e1696`
+- Status: `rejected`
+- Verifier: expected '(236, 39)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Work modulo 269. Let x_0 = (170, 189). For t >= 0, x_(t+1) = A x_t + b, where A = [[27, 28], [193, 202]] and b = (57, 107). What is x_223? Return only the ordered pair as two integers, like (a, b).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-boolean_count-0051-3fc13568496c
+
+- Family: `boolean_count`
+- Profile: `extreme`
+- Task hash: `0a0b39b64635448a73eb89a294509afeb2d62e1a1be9ebe1bf294c93f260d22d`
+- Status: `rejected`
+- Verifier: expected '51', got ''
+- Error: none
+
+Prompt:
+
+```text
+For Boolean variables ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11'], how many assignments satisfy this CNF formula: (!x4 OR x7) AND (x4 OR x2 OR x11) AND (!x3 OR !x6) AND (!x2 OR x8) AND (!x11 OR x4 OR !x2) AND (!x0 OR !x6 OR x3) AND (x5 OR !x1) AND (!x6 OR !x5) AND (!x1 OR !x8 OR x2) AND (!x0 OR x7 OR x2) AND (!x8 OR !x4 OR !x3) AND (x6 OR x1 OR x5) AND (!x6 OR !x0) AND (x6 OR x7) AND (!x3 OR x5 OR !x1) AND (!x0 OR !x7) AND (!x4 OR !x3) AND (!x8 OR !x1 OR x7) AND (x9 OR !x10 OR x8) AND (!x8 OR !x5) AND (!x11 OR x8 OR !x10) AND (x7 OR !x3) AND (!x0 OR x1) AND (x6 OR x9) AND (x10 OR !x0) AND (!x11 OR !x0 OR !x3)? Return only the integer count.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-dfa_shortest-0049-6f2953000183
+
+- Family: `dfa_shortest`
+- Profile: `extreme`
+- Task hash: `e3c6bbbea89d6cfaed4d8b1c3403fe09d38d6e42fdb341b8645bc70f711a3388`
+- Status: `rejected`
+- Verifier: expected 'ba', got '<empty>'
+- Error: none
+
+Prompt:
+
+```text
+Given this deterministic finite automaton, find the lexicographically first shortest word over alphabet ['a', 'b', 'c', 'd', 'e'] that takes state 7 to state 1. Transitions: 0: a->25, b->9, c->0, d->6, e->18; 1: a->18, b->10, c->2, d->4, e->19; 2: a->11, b->4, c->10, d->8, e->1; 3: a->23, b->20, c->10, d->20, e->12; 4: a->16, b->1, c->11, d->8, e->19; 5: a->1, b->20, c->22, d->7, e->21; 6: a->8, b->23, c->16, d->8, e->22; 7: a->17, b->5, c->18, d->22, e->19; 8: a->20, b->18, c->1, d->16, e->6; 9: a->20, b->23, c->11, d->1, e->24; 10: a->4, b->24, c->16, d->23, e->19; 11: a->0, b->17, c->9, d->2, e->9; 12: a->13, b->1, c->7, d->3, e->10; 13: a->19, b->13, c->2, d->1, e->3; 14: a->24, b->4, c->0, d->8, e->10; 15: a->18, b->9, c->2, d->13, e->20; 16: a->1, b->12, c->25, d->8, e->14; 17: a->10, b->11, c->21, d->15, e->10; 18: a->13, b->9, c->23, d->2, e->21; 19: a->10, b->0, c->11, d->18, e->2; 20: a->16, b->25, c->17, d->15, e->8; 21: a->17, b->19, c->17, d->13, e->6; 22: a->18, b->4, c->22, d->21, e->1; 23: a->3, b->12, c->19, d->22, e->6; 24: a->25, b->10, c->8, d->10, e->25; 25: a->17, b->23, c->9, d->19, e->25. Return only the word. If the empty word is correct, return <empty>.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-program_trace-0052-5aebfe66818e
+
+- Family: `program_trace`
+- Profile: `extreme`
+- Task hash: `cff214fde6a47aafc9d7d54755620e59240928bb0b5c168b36f08f9cb90e08a5`
+- Status: `rejected`
+- Verifier: expected '(266, 225, 82)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Registers r0,r1,r2 start as (71, 89, 49). Arithmetic is modulo 269. Execute these instructions in order: r1 = r1 * (r0 + 1) + 177; r0 = r0 + 2*r1 + 210; r1 = r1 * (r0 + 1) + 0; r0 = r0 + r0 + 47; r2 = r2 + r2 + 132; r1 = r1 + 2*r2 + 229; r2 = r2 XOR r0 XOR 230; r0 = r0 XOR r1 XOR 180; r1 = r1 + r1 + 114; r2 = r2 + 2*r0 + 135; r1 = r1 XOR r2 XOR 126; r1 = r1 + 2*r1 + 107; r0 = r0 XOR r0 XOR 158; r1 = r1 * (r2 + 1) + 210; r2 = r2 + 2*r0 + 197; r1 = r1 + 2*r2 + 114; r1 = r1 + r0 + 101; r1 = r1 + r2 + 172; r1 = r1 + 2*r2 + 234; r1 = r1 XOR r1 XOR 259; r1 = r1 + 2*r1 + 104; r0 = r0 * (r0 + 1) + 79; r1 = r1 XOR r2 XOR 67; r0 = r0 XOR r2 XOR 28; r2 = r2 * (r0 + 1) + 191; r2 = r2 XOR r2 XOR 92; r0 = r0 * (r0 + 1) + 3; r0 = r0 * (r1 + 1) + 178; r1 = r1 + 2*r0 + 144; r0 = r0 + r1 + 118; r0 = r0 + r1 + 188; r1 = r1 * (r0 + 1) + 22; r2 = r2 + 2*r1 + 155; r2 = r2 + 2*r0 + 122; r2 = r2 * (r1 + 1) + 209; r2 = r2 + 2*r2 + 35; r2 = r2 XOR r2 XOR 33; r1 = r1 XOR r1 XOR 15; r1 = r1 * (r2 + 1) + 129; r2 = r2 * (r1 + 1) + 255; r2 = r2 + 2*r2 + 267; r0 = r0 + 2*r1 + 100; r0 = r0 * (r1 + 1) + 195; r1 = r1 + r1 + 181; r1 = r1 + r0 + 221; r0 = r0 + 2*r1 + 204; r0 = r0 + 2*r0 + 118; r1 = r1 * (r2 + 1) + 152; r0 = r0 + r0 + 191; r1 = r1 + r1 + 215; r0 = r0 + r2 + 212; r2 = r2 + r2 + 71; r1 = r1 * (r2 + 1) + 98; r0 = r0 + 2*r1 + 1; r1 = r1 * (r1 + 1) + 30; r2 = r2 + r0 + 42; r1 = r1 XOR r2 XOR 193; r2 = r2 * (r1 + 1) + 97; r0 = r0 XOR r0 XOR 199; r1 = r1 + r0 + 251; r2 = r2 + r0 + 54; r2 = r2 + 2*r0 + 32; r1 = r1 + 2*r1 + 21; r0 = r0 + r1 + 54; r0 = r0 + r1 + 101; r2 = r2 + r2 + 179; r1 = r1 * (r0 + 1) + 186; r0 = r0 * (r1 + 1) + 139; r1 = r1 * (r0 + 1) + 29; r2 = r2 * (r2 + 1) + 232; r0 = r0 XOR r1 XOR 148; r1 = r1 * (r1 + 1) + 143; r2 = r2 XOR r0 XOR 250; r0 = r0 XOR r0 XOR 97; r2 = r2 XOR r0 XOR 121; r0 = r0 XOR r2 XOR 39; r1 = r1 + 2*r1 + 259; r2 = r2 * (r1 + 1) + 52; r0 = r0 XOR r0 XOR 208; r0 = r0 + 2*r0 + 95; r2 = r2 * (r2 + 1) + 12; r2 = r2 XOR r2 XOR 187; r2 = r2 + 2*r1 + 203; r2 = r2 XOR r2 XOR 213; r0 = r0 + 2*r2 + 25; r1 = r1 + r1 + 214; r1 = r1 * (r0 + 1) + 56; r1 = r1 XOR r0 XOR 9; r0 = r0 XOR r0 XOR 266; r2 = r2 + r0 + 141. Return only the final register tuple as (r0, r1, r2).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-counterexample_search-0053-7dd95c912825
+
+- Family: `counterexample_search`
+- Profile: `extreme`
+- Task hash: `058cd6f5ce2ef67b15f930db0d266d4d534e629c47eb66734d9b2ef4abd943b7`
+- Status: `rejected`
+- Verifier: expected '7333', got ''
+- Error: none
+
+Prompt:
+
+```text
+Find the smallest integer x in [0, 8767] satisfying all constraints: (82*x + 80) mod 84 = 30; (26*x + 26) mod 37 = 23; (18*x + 13) mod 47 = 31; (45*x + 52) mod 88 = 37; (37*x + 1) mod 55 = 7. Return only x.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-string_rewrite-0054-0acb99b0c87f
+
+- Family: `string_rewrite`
+- Profile: `extreme`
+- Task hash: `e87803d617fb182ea3f8029890ac27afb3564c9ac8f4c12d5cb9e6098ca3df49`
+- Status: `rejected`
+- Verifier: expected '32032000323312230330300203313232323', got ''
+- Error: none
+
+Prompt:
+
+```text
+Start with circular string 21221103001033032212133013111132222. For each step, replace every position i simultaneously using the pair s[i]s[(i+1) mod n]. Rules: 00->2, 01->0, 02->3, 03->2, 10->3, 11->2, 12->2, 13->0, 20->0, 21->3, 22->1, 23->3, 30->1, 31->2, 32->0, 33->3. After 124 steps, what is the string? Return only the final string.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-grid_checksum-0055-c9b413aa4392
+
+- Family: `grid_checksum`
+- Profile: `extreme`
+- Task hash: `7ba9a716c6f7d71aabf4bb173c0d0f40dbb887faf730ba5a61783316c4288ea8`
+- Status: `rejected`
+- Verifier: expected '57245', got ''
+- Error: none
+
+Prompt:
+
+```text
+On this 12x12 grid, rows are: 1 2 9 4 4 1 2 4 1 4 6 2; 6 2 0 4 4 2 6 2 3 9 3 1; 0 2 7 1 8 8 1 0 2 9 6 9; 5 4 7 8 8 3 4 3 0 0 2 7; 7 5 7 1 3 2 1 5 2 5 9 1; 0 6 7 8 7 1 2 8 7 0 9 1; 4 7 4 1 5 3 4 8 8 6 6 1; 3 8 2 1 1 3 2 5 4 5 7 1; 1 4 8 7 1 6 5 8 5 3 7 0; 0 9 6 0 3 0 7 1 4 9 2 6; 6 2 5 9 6 6 7 2 2 2 2 7; 3 0 7 0 9 0 5 4 1 0 8 9. Start at row 6, column 11. Follow moves DUDUURULDURRDDDRRRUDDUDRDDLUULLLURRDRRLRDRLDLLLUDRLUULLURULLURUDDDRURULRLDDDRURURRDLLDDDUULUDUULDRRLRRDURDULUURUUUDULRDLRRUUUUDRRURLURUDURLDLUDLLLLLDURURLLRUULLLDURRRUDRDLURUDDDURLRDDUULDRDRUDUUDLDUDDRDUDDLDLUURDDDDDURLLRURDLRLRDURDLDLRUURRRUURRLLDUUURLDDDLDD with wraparound at edges. Checksum starts at 0; after visiting each new cell, checksum = (checksum*31 + cell_value) mod 1000003. Include the starting cell before moves. Return only the final checksum integer.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-affine_mod-0056-b6f72dd289b0
+
+- Family: `affine_mod`
+- Profile: `extreme`
+- Task hash: `63cdc34df0534ab40ea0b2cf783618a433a2330fb5608ca5cbc86ea49e673618`
+- Status: `rejected`
+- Verifier: expected '(237, 202)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Work modulo 263. Let x_0 = (116, 73). For t >= 0, x_(t+1) = A x_t + b, where A = [[71, 31], [250, 142]] and b = (90, 5). What is x_185? Return only the ordered pair as two integers, like (a, b).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-dfa_shortest-0057-6bf003ce3d9a
+
+- Family: `dfa_shortest`
+- Profile: `extreme`
+- Task hash: `956775605f6027c3d2229a0e24c69fe329fe34c258d7c23e6da4bc76bec9b1b7`
+- Status: `rejected`
+- Verifier: expected 'ace', got '<empty>'
+- Error: none
+
+Prompt:
+
+```text
+Given this deterministic finite automaton, find the lexicographically first shortest word over alphabet ['a', 'b', 'c', 'd', 'e'] that takes state 22 to state 15. Transitions: 0: a->9, b->8, c->11, d->9, e->8; 1: a->12, b->20, c->4, d->15, e->20; 2: a->13, b->20, c->13, d->5, e->15; 3: a->0, b->15, c->6, d->11, e->12; 4: a->8, b->9, c->0, d->22, e->21; 5: a->21, b->19, c->4, d->0, e->8; 6: a->17, b->1, c->10, d->22, e->4; 7: a->14, b->17, c->21, d->2, e->14; 8: a->13, b->20, c->4, d->12, e->16; 9: a->4, b->3, c->15, d->1, e->15; 10: a->17, b->4, c->22, d->16, e->9; 11: a->13, b->11, c->21, d->20, e->8; 12: a->21, b->21, c->11, d->9, e->21; 13: a->8, b->9, c->10, d->21, e->14; 14: a->12, b->17, c->10, d->6, e->8; 15: a->15, b->1, c->0, d->12, e->18; 16: a->2, b->18, c->8, d->14, e->18; 17: a->13, b->18, c->2, d->6, e->6; 18: a->14, b->5, c->10, d->22, e->3; 19: a->13, b->13, c->15, d->17, e->6; 20: a->20, b->21, c->18, d->20, e->8; 21: a->19, b->9, c->10, d->14, e->18; 22: a->17, b->22, c->16, d->0, e->12. Return only the word. If the empty word is correct, return <empty>.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-boolean_count-0059-d6654a93f65d
+
+- Family: `boolean_count`
+- Profile: `extreme`
+- Task hash: `ca28b06b647a083affb06665b04a915347a794005a843525d9db56ff83485d85`
+- Status: `rejected`
+- Verifier: expected '7', got ''
+- Error: none
+
+Prompt:
+
+```text
+For Boolean variables ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11'], how many assignments satisfy this CNF formula: (!x1 OR !x6 OR !x5) AND (x9 OR x4) AND (!x6 OR !x5 OR x3) AND (!x0 OR !x9) AND (x10 OR !x1 OR !x9) AND (!x2 OR !x5 OR x11) AND (x1 OR x6 OR x4) AND (x4 OR !x5) AND (!x4 OR x11 OR x8) AND (!x10 OR !x2) AND (!x4 OR !x2 OR x8) AND (x1 OR !x6) AND (!x7 OR !x10) AND (x8 OR x1 OR x7) AND (!x5 OR x6 OR !x4) AND (x0 OR !x1) AND (x1 OR x3) AND (!x2 OR x11) AND (!x6 OR !x9 OR !x4) AND (x7 OR x5 OR x11) AND (!x2 OR x11 OR x9) AND (!x4 OR x8) AND (x8 OR !x5) AND (!x1 OR x4) AND (!x3 OR !x11 OR !x7) AND (!x2 OR !x1 OR !x3) AND (!x10 OR x11) AND (x5 OR x6) AND (!x2 OR x11) AND (!x8 OR !x3 OR x1) AND (x8 OR x4 OR !x1) AND (x3 OR x0 OR !x2) AND (!x11 OR !x7)? Return only the integer count.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-program_trace-0060-380e7dbe9d28
+
+- Family: `program_trace`
+- Profile: `extreme`
+- Task hash: `a1f774c0005e8107ae6a9c179ce6ddf41164a7026af5fc06d0afa0b86bbf33b3`
+- Status: `rejected`
+- Verifier: expected '(3, 38, 136)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Registers r0,r1,r2 start as (230, 80, 230). Arithmetic is modulo 263. Execute these instructions in order: r2 = r2 * (r2 + 1) + 43; r2 = r2 * (r2 + 1) + 248; r2 = r2 * (r1 + 1) + 229; r2 = r2 + 2*r0 + 99; r2 = r2 + 2*r1 + 64; r1 = r1 * (r2 + 1) + 159; r1 = r1 + 2*r2 + 249; r1 = r1 * (r0 + 1) + 99; r1 = r1 + 2*r2 + 182; r2 = r2 * (r2 + 1) + 56; r2 = r2 + 2*r2 + 127; r0 = r0 * (r1 + 1) + 83; r1 = r1 XOR r0 XOR 165; r1 = r1 XOR r1 XOR 255; r0 = r0 * (r2 + 1) + 251; r0 = r0 XOR r2 XOR 180; r1 = r1 XOR r1 XOR 175; r2 = r2 + 2*r1 + 31; r2 = r2 XOR r1 XOR 40; r2 = r2 + 2*r2 + 13; r0 = r0 + r1 + 166; r0 = r0 + r0 + 72; r0 = r0 XOR r2 XOR 154; r1 = r1 + 2*r1 + 211; r0 = r0 XOR r1 XOR 22; r1 = r1 + 2*r0 + 53; r1 = r1 * (r1 + 1) + 181; r2 = r2 XOR r1 XOR 233; r1 = r1 XOR r2 XOR 119; r1 = r1 + 2*r1 + 178; r0 = r0 + r2 + 200; r1 = r1 XOR r2 XOR 147; r1 = r1 * (r0 + 1) + 72; r0 = r0 * (r0 + 1) + 177; r2 = r2 XOR r0 XOR 259; r0 = r0 XOR r2 XOR 233; r0 = r0 XOR r2 XOR 174; r0 = r0 + r0 + 74; r0 = r0 + r2 + 117; r0 = r0 + 2*r1 + 68; r1 = r1 + 2*r1 + 218; r1 = r1 XOR r2 XOR 95; r2 = r2 + r2 + 41; r2 = r2 XOR r0 XOR 84; r0 = r0 + 2*r0 + 50; r1 = r1 XOR r2 XOR 108; r1 = r1 + r0 + 127; r0 = r0 * (r1 + 1) + 180; r0 = r0 XOR r0 XOR 56; r1 = r1 + r1 + 102; r2 = r2 + r2 + 108; r1 = r1 * (r0 + 1) + 207; r0 = r0 + r1 + 18; r0 = r0 + r1 + 54; r1 = r1 + 2*r2 + 55; r0 = r0 XOR r2 XOR 240; r0 = r0 + 2*r1 + 86; r2 = r2 XOR r0 XOR 183; r1 = r1 XOR r1 XOR 23; r1 = r1 * (r1 + 1) + 128; r0 = r0 + 2*r2 + 9; r0 = r0 * (r0 + 1) + 8; r1 = r1 XOR r1 XOR 242; r0 = r0 * (r2 + 1) + 73; r0 = r0 + r1 + 74; r0 = r0 + r2 + 66; r1 = r1 * (r1 + 1) + 155; r2 = r2 XOR r0 XOR 70; r0 = r0 * (r0 + 1) + 175; r0 = r0 + 2*r2 + 231; r1 = r1 XOR r2 XOR 8; r2 = r2 XOR r2 XOR 102; r1 = r1 * (r0 + 1) + 92; r1 = r1 + 2*r2 + 254; r1 = r1 * (r0 + 1) + 252; r0 = r0 + r0 + 246; r1 = r1 * (r2 + 1) + 199; r0 = r0 + r1 + 195; r2 = r2 + 2*r0 + 105; r0 = r0 XOR r0 XOR 114; r0 = r0 + 2*r2 + 96; r0 = r0 + r0 + 225; r1 = r1 * (r2 + 1) + 70; r2 = r2 + 2*r1 + 236; r0 = r0 XOR r0 XOR 173; r2 = r2 + 2*r0 + 230; r0 = r0 + r2 + 192; r1 = r1 * (r0 + 1) + 5; r2 = r2 * (r0 + 1) + 150; r2 = r2 + 2*r2 + 128; r1 = r1 XOR r2 XOR 176; r2 = r2 + 2*r2 + 104; r0 = r0 * (r1 + 1) + 32; r0 = r0 + r1 + 76; r1 = r1 XOR r0 XOR 227; r2 = r2 + r0 + 233; r2 = r2 * (r1 + 1) + 197; r2 = r2 + 2*r2 + 99; r1 = r1 * (r0 + 1) + 186; r2 = r2 XOR r1 XOR 16; r0 = r0 + r1 + 209; r2 = r2 + 2*r2 + 27; r0 = r0 XOR r2 XOR 151; r1 = r1 XOR r0 XOR 76; r1 = r1 + 2*r0 + 185; r1 = r1 + r1 + 76; r1 = r1 XOR r1 XOR 175; r1 = r1 * (r2 + 1) + 44; r0 = r0 + r1 + 159; r1 = r1 + r0 + 2; r2 = r2 XOR r1 XOR 5; r1 = r1 + r1 + 9; r0 = r0 XOR r2 XOR 15; r2 = r2 + 2*r2 + 190; r1 = r1 XOR r0 XOR 233; r2 = r2 + 2*r0 + 253; r2 = r2 + r2 + 65; r2 = r2 + 2*r1 + 97; r2 = r2 XOR r1 XOR 142; r1 = r1 XOR r0 XOR 26; r2 = r2 + r0 + 188; r0 = r0 * (r2 + 1) + 194; r1 = r1 XOR r0 XOR 69; r1 = r1 XOR r1 XOR 129; r1 = r1 + r1 + 50; r0 = r0 + 2*r0 + 115; r2 = r2 XOR r1 XOR 230; r1 = r1 * (r2 + 1) + 185. Return only the final register tuple as (r0, r1, r2).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-counterexample_search-0061-e82044f55402
+
+- Family: `counterexample_search`
+- Profile: `extreme`
+- Task hash: `815cb3fe3c04db3931a60196398332381deb901b88e15712a96f3a6102019cc1`
+- Status: `rejected`
+- Verifier: expected '1736', got ''
+- Error: none
+
+Prompt:
+
+```text
+Find the smallest integer x in [0, 14835] satisfying all constraints: (41*x + 25) mod 42 = 11; (48*x + 50) mod 83 = 46; (50*x + 16) mod 53 = 2; (20*x + 55) mod 69 = 68; (35*x + 5) mod 59 = 54. Return only x.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-string_rewrite-0062-3ff7400ab60b
+
+- Family: `string_rewrite`
+- Profile: `extreme`
+- Task hash: `aeb029bc2257847003c69f8a3defe9504772a59473633391e37f4b59d9eb617d`
+- Status: `rejected`
+- Verifier: expected '012103331123233003311000331033103100101', got '222320210333113120220202213031033133200'
+- Error: none
+
+Prompt:
+
+```text
+Start with circular string 222320210333113120220202213031033133200. For each step, replace every position i simultaneously using the pair s[i]s[(i+1) mod n]. Rules: 00->1, 01->2, 02->0, 03->0, 10->1, 11->3, 12->2, 13->0, 20->1, 21->0, 22->1, 23->3, 30->2, 31->1, 32->3, 33->3. After 100 steps, what is the string? Return only the final string.
+```
+
+Answer:
+
+```text
+<answer>222320210333113120220202213031033133200</answer>
+```
+
+### deepseek-v4-pro / lp-grid_checksum-0063-8e525e120ccd
+
+- Family: `grid_checksum`
+- Profile: `extreme`
+- Task hash: `0dd9de1c0c375b13341bb4f7ac049a6886b01cfdc3b8a864063a3d64d8876c6d`
+- Status: `rejected`
+- Verifier: expected '544435', got ''
+- Error: none
+
+Prompt:
+
+```text
+On this 15x15 grid, rows are: 9 4 5 7 7 9 3 8 2 5 9 0 6 0 8; 8 0 3 2 1 8 8 2 0 4 7 3 0 9 2; 9 2 0 2 7 9 7 0 4 9 3 6 7 4 9; 5 5 9 4 2 8 7 2 1 6 5 1 7 0 1; 0 8 6 5 5 2 2 2 1 1 9 6 6 2 3; 8 8 3 9 7 9 7 9 3 2 3 6 4 3 8; 0 1 6 7 6 2 5 5 6 5 5 5 9 5 3; 8 3 8 1 4 1 5 0 7 6 8 5 2 5 6; 7 5 0 3 8 2 1 1 5 0 9 5 6 3 5; 1 4 5 9 1 8 5 4 4 5 0 6 1 0 2; 6 9 8 9 9 5 2 3 9 9 6 0 4 3 6; 3 8 5 4 7 4 0 4 0 0 4 4 9 6 1; 5 3 6 0 4 5 9 4 1 4 4 9 4 4 5; 1 0 6 8 8 7 6 9 0 9 0 1 5 6 6; 8 7 3 4 2 8 5 6 0 3 1 0 6 6 1. Start at row 5, column 9. Follow moves ULULUDURLDULLDURUURDLLDDLRLULRRDRDUURLLULRLLLLLRURDRULDULDLUURUDURULRLLDURLUUURRRDLUURDDDURUULRRLDRLULULDDDLLDURRDDUDUDDLLUDRLLURDRUULUURLRDUUULDLDRRLRRRDULRDLUUUDLDDDURLRLDDLDDLDRRLDRUUULULDRRDRLDLULLLRRDDUDLRLLRRLRDURRLLUDDDRDRUDULUUDDLDLDDRRUDRUDLRRRRDRRULUDRRRDLLUULLLLDURUULDLU with wraparound at edges. Checksum starts at 0; after visiting each new cell, checksum = (checksum*31 + cell_value) mod 1000003. Include the starting cell before moves. Return only the final checksum integer.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-affine_mod-0064-8380d4ceee49
+
+- Family: `affine_mod`
+- Profile: `extreme`
+- Task hash: `942cc85e9645d297edc8743719a568b0554b3a2d9d79430d569787dfac46aa55`
+- Status: `rejected`
+- Verifier: expected '(216, 264)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Work modulo 271. Let x_0 = (96, 146). For t >= 0, x_(t+1) = A x_t + b, where A = [[123, 3], [124, 256]] and b = (81, 188). What is x_226? Return only the ordered pair as two integers, like (a, b).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-dfa_shortest-0065-3ca5776f0189
+
+- Family: `dfa_shortest`
+- Profile: `extreme`
+- Task hash: `a1b585420dc2457a4ac5c433272f53ce250098ac5dbb5dee64c7c5c22c9e82b8`
+- Status: `rejected`
+- Verifier: expected 'cb', got '<empty>'
+- Error: none
+
+Prompt:
+
+```text
+Given this deterministic finite automaton, find the lexicographically first shortest word over alphabet ['a', 'b', 'c', 'd', 'e'] that takes state 20 to state 19. Transitions: 0: a->10, b->6, c->17, d->12, e->22; 1: a->17, b->3, c->1, d->3, e->10; 2: a->14, b->22, c->10, d->12, e->22; 3: a->11, b->2, c->12, d->14, e->16; 4: a->8, b->8, c->3, d->22, e->0; 5: a->7, b->24, c->18, d->13, e->12; 6: a->9, b->19, c->13, d->3, e->2; 7: a->17, b->23, c->17, d->5, e->11; 8: a->2, b->16, c->18, d->11, e->0; 9: a->15, b->9, c->3, d->24, e->7; 10: a->5, b->19, c->14, d->3, e->12; 11: a->12, b->7, c->12, d->12, e->7; 12: a->3, b->4, c->21, d->17, e->24; 13: a->2, b->0, c->15, d->12, e->1; 14: a->16, b->9, c->15, d->15, e->1; 15: a->3, b->15, c->21, d->11, e->8; 16: a->12, b->2, c->20, d->21, e->21; 17: a->5, b->15, c->5, d->8, e->10; 18: a->17, b->18, c->19, d->22, e->23; 19: a->17, b->5, c->0, d->0, e->19; 20: a->14, b->8, c->6, d->17, e->24; 21: a->15, b->24, c->20, d->6, e->20; 22: a->20, b->17, c->16, d->10, e->13; 23: a->24, b->14, c->3, d->19, e->0; 24: a->12, b->18, c->24, d->23, e->15. Return only the word. If the empty word is correct, return <empty>.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-boolean_count-0067-e7d827b3571f
+
+- Family: `boolean_count`
+- Profile: `extreme`
+- Task hash: `24e782853a30e72c5b64f460758d858bf086133b2e69f5c74d1e6c6b2c4e5220`
+- Status: `rejected`
+- Verifier: expected '2', got ''
+- Error: none
+
+Prompt:
+
+```text
+For Boolean variables ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11', 'x12'], how many assignments satisfy this CNF formula: (x12 OR x3) AND (!x9 OR !x4 OR x3) AND (!x5 OR !x9) AND (x8 OR !x10 OR x1) AND (!x3 OR !x5) AND (!x4 OR !x7) AND (x11 OR !x7) AND (x7 OR !x4 OR x11) AND (!x11 OR x0) AND (!x12 OR !x5) AND (!x6 OR x7) AND (x0 OR x12 OR !x10) AND (x12 OR x0 OR !x4) AND (!x7 OR x11) AND (x10 OR x11 OR x12) AND (!x10 OR x11) AND (!x8 OR !x4 OR x9) AND (!x11 OR x6 OR !x8) AND (!x10 OR x2 OR !x8) AND (!x7 OR !x12 OR x8) AND (x5 OR x1) AND (x7 OR !x4) AND (x7 OR !x9) AND (!x6 OR !x8) AND (!x1 OR !x7) AND (!x10 OR x2 OR !x12) AND (!x2 OR !x3) AND (!x8 OR x2) AND (!x1 OR x5 OR !x4) AND (x4 OR x10) AND (!x12 OR x0) AND (x7 OR x1)? Return only the integer count.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-program_trace-0068-775ac1b75907
+
+- Family: `program_trace`
+- Profile: `extreme`
+- Task hash: `24ed8d392ba17f6f6080abd483e77bd5067133741632b3e281f04d246863e094`
+- Status: `rejected`
+- Verifier: expected '(238, 127, 42)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Registers r0,r1,r2 start as (148, 25, 79). Arithmetic is modulo 251. Execute these instructions in order: r0 = r0 * (r1 + 1) + 196; r1 = r1 * (r0 + 1) + 76; r0 = r0 + r0 + 197; r0 = r0 * (r0 + 1) + 65; r2 = r2 + r1 + 21; r1 = r1 + r1 + 39; r2 = r2 + 2*r1 + 45; r1 = r1 + 2*r2 + 70; r1 = r1 XOR r0 XOR 129; r0 = r0 + 2*r2 + 208; r0 = r0 * (r1 + 1) + 197; r2 = r2 * (r0 + 1) + 121; r2 = r2 XOR r2 XOR 82; r0 = r0 + r0 + 67; r1 = r1 XOR r1 XOR 78; r2 = r2 XOR r0 XOR 110; r1 = r1 * (r0 + 1) + 154; r0 = r0 + 2*r0 + 128; r1 = r1 + r2 + 226; r2 = r2 + r2 + 236; r1 = r1 * (r2 + 1) + 73; r0 = r0 * (r0 + 1) + 4; r2 = r2 + r0 + 248; r0 = r0 * (r0 + 1) + 239; r0 = r0 * (r0 + 1) + 143; r1 = r1 * (r0 + 1) + 152; r0 = r0 + r2 + 38; r1 = r1 XOR r0 XOR 1; r0 = r0 * (r1 + 1) + 250; r0 = r0 + r1 + 238; r2 = r2 + r2 + 153; r1 = r1 XOR r2 XOR 42; r1 = r1 + 2*r2 + 160; r1 = r1 + 2*r1 + 193; r1 = r1 + 2*r1 + 191; r1 = r1 XOR r2 XOR 41; r1 = r1 + r1 + 83; r0 = r0 * (r1 + 1) + 140; r2 = r2 XOR r2 XOR 224; r1 = r1 + 2*r1 + 3; r1 = r1 + r2 + 94; r0 = r0 + r1 + 156; r2 = r2 XOR r2 XOR 77; r1 = r1 * (r0 + 1) + 143; r2 = r2 XOR r0 XOR 120; r0 = r0 + 2*r2 + 159; r1 = r1 XOR r2 XOR 148; r0 = r0 XOR r0 XOR 213; r1 = r1 * (r1 + 1) + 214; r1 = r1 * (r0 + 1) + 139; r1 = r1 * (r1 + 1) + 37; r1 = r1 + r2 + 184; r1 = r1 XOR r2 XOR 122; r2 = r2 + 2*r2 + 207; r1 = r1 + r1 + 240; r2 = r2 * (r2 + 1) + 96; r1 = r1 + r1 + 195; r1 = r1 + r1 + 151; r2 = r2 + 2*r1 + 211; r1 = r1 * (r2 + 1) + 105; r1 = r1 + r0 + 165; r0 = r0 + 2*r2 + 18; r2 = r2 + 2*r1 + 227; r0 = r0 * (r1 + 1) + 122; r1 = r1 + 2*r1 + 22; r1 = r1 + 2*r0 + 41; r1 = r1 + r2 + 47; r0 = r0 * (r0 + 1) + 203; r0 = r0 * (r2 + 1) + 224; r1 = r1 + 2*r2 + 0; r1 = r1 + 2*r2 + 236; r0 = r0 + r0 + 44; r0 = r0 + 2*r1 + 116; r2 = r2 XOR r0 XOR 228; r2 = r2 + 2*r1 + 219; r1 = r1 + r2 + 130; r0 = r0 + 2*r0 + 114; r2 = r2 + r0 + 14; r2 = r2 + 2*r0 + 179; r2 = r2 * (r2 + 1) + 22; r1 = r1 * (r1 + 1) + 150; r0 = r0 * (r2 + 1) + 168; r2 = r2 XOR r2 XOR 249; r2 = r2 XOR r0 XOR 210; r0 = r0 + r2 + 120; r2 = r2 + r1 + 148; r0 = r0 + r0 + 202; r2 = r2 + 2*r1 + 110; r0 = r0 XOR r2 XOR 54; r0 = r0 + r1 + 181; r0 = r0 + 2*r1 + 65; r1 = r1 + 2*r1 + 237; r2 = r2 * (r0 + 1) + 163; r0 = r0 * (r2 + 1) + 93; r0 = r0 XOR r1 XOR 196; r0 = r0 * (r2 + 1) + 77; r2 = r2 + r0 + 121; r1 = r1 + 2*r1 + 33. Return only the final register tuple as (r0, r1, r2).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-counterexample_search-0069-2059c46af83b
+
+- Family: `counterexample_search`
+- Profile: `extreme`
+- Task hash: `e9b63b335364483cd3a3459e472b1a041271c3819d53f84911290d81fa9823a0`
+- Status: `rejected`
+- Verifier: expected '5208', got ''
+- Error: none
+
+Prompt:
+
+```text
+Find the smallest integer x in [0, 7364] satisfying all constraints: (14*x + 41) mod 95 = 88; (28*x + 22) mod 32 = 22; (6*x + 41) mod 44 = 5; (37*x + 61) mod 64 = 53; (87*x + 34) mod 95 = 75. Return only x.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-string_rewrite-0070-0912ab27a556
+
+- Family: `string_rewrite`
+- Profile: `extreme`
+- Task hash: `e654aa07a058f9d07b3e7c1a33b58462075b14d1a18d8c51fcac5e17ad108854`
+- Status: `rejected`
+- Verifier: expected '31313303231313031312310033033231320123233', got ''
+- Error: none
+
+Prompt:
+
+```text
+Start with circular string 00300321220303232002202331333002221120303. For each step, replace every position i simultaneously using the pair s[i]s[(i+1) mod n]. Rules: 00->0, 01->1, 02->0, 03->3, 10->3, 11->1, 12->0, 13->3, 20->3, 21->0, 22->1, 23->1, 30->3, 31->2, 32->3, 33->1. After 126 steps, what is the string? Return only the final string.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-grid_checksum-0071-585837a5e2f2
+
+- Family: `grid_checksum`
+- Profile: `extreme`
+- Task hash: `765961e5c21e15188e474ec145c9c1ee25ee62329140ab365243eda59f20834b`
+- Status: `rejected`
+- Verifier: expected '255652', got ''
+- Error: none
+
+Prompt:
+
+```text
+On this 12x12 grid, rows are: 0 8 2 9 8 2 2 2 5 7 8 0; 2 7 5 5 0 4 0 1 2 5 7 6; 8 4 8 5 3 1 3 4 6 4 1 5; 2 1 6 8 7 5 3 8 2 4 5 6; 6 9 9 2 5 7 9 1 6 6 8 5; 5 4 5 3 4 0 2 1 0 7 8 6; 8 4 0 0 6 6 0 9 2 3 5 1; 7 7 4 2 9 5 6 0 4 5 2 5; 9 3 5 6 0 3 6 8 5 3 8 5; 6 1 5 0 9 0 5 7 4 5 2 8; 0 9 5 3 9 2 1 0 6 8 6 5; 3 6 6 0 6 1 8 6 9 1 5 1. Start at row 1, column 9. Follow moves LULRLLRLLDLRLLLULLUDLLLDUUURLURDDUULDULDDRDURLUURDRLDDLULLRUDRLDRDDUDUULDUDRURDDUULLUDLDLLRUDDDDRRLULLLLULLRDLLRRRRLDLLDDURLUURUDULLRLLLULRDDUDULRRUULDLUDDUDURURULRRRRRLRLURRUUULLURLLLLLUURLD with wraparound at edges. Checksum starts at 0; after visiting each new cell, checksum = (checksum*31 + cell_value) mod 1000003. Include the starting cell before moves. Return only the final checksum integer.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-affine_mod-0072-2e61e8fa7db9
+
+- Family: `affine_mod`
+- Profile: `extreme`
+- Task hash: `2dfa8094993b6b5e3e8dbdd7d732e072a6ed60d777364afe36328d36620d1067`
+- Status: `rejected`
+- Verifier: expected '(132, 242)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Work modulo 269. Let x_0 = (244, 100). For t >= 0, x_(t+1) = A x_t + b, where A = [[171, 234], [124, 242]] and b = (35, 1). What is x_220? Return only the ordered pair as two integers, like (a, b).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-boolean_count-0075-fc7953cc9e59
+
+- Family: `boolean_count`
+- Profile: `extreme`
+- Task hash: `660fb4ea68cd42c63943fcc8ea72ab6ea53e9f67308f4bff7f35b593264d3a10`
+- Status: `rejected`
+- Verifier: expected '48', got ''
+- Error: none
+
+Prompt:
+
+```text
+For Boolean variables ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11'], how many assignments satisfy this CNF formula: (x7 OR !x10) AND (!x4 OR !x6) AND (!x8 OR !x0 OR x5) AND (!x2 OR x3 OR !x11) AND (x9 OR x8) AND (x5 OR !x7 OR x11) AND (x3 OR !x1 OR x11) AND (x8 OR !x3) AND (!x8 OR x7) AND (x7 OR !x4 OR x2) AND (x8 OR !x10 OR !x1) AND (!x4 OR x11 OR !x3) AND (!x0 OR x7 OR !x9) AND (!x8 OR !x3 OR x10) AND (!x6 OR !x7 OR x8) AND (!x11 OR !x2) AND (!x4 OR !x8) AND (!x2 OR x8 OR !x11) AND (x7 OR x6) AND (x11 OR !x2 OR !x10) AND (!x8 OR !x6) AND (x8 OR x5 OR !x2) AND (!x9 OR x0 OR x8) AND (x11 OR x8) AND (x11 OR !x8)? Return only the integer count.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-program_trace-0076-0e08f92c6039
+
+- Family: `program_trace`
+- Profile: `extreme`
+- Task hash: `e8d34091889c0f7b98eb72ee05be89e38fae20acfc62d73a634f844fddf1ed32`
+- Status: `rejected`
+- Verifier: expected '(167, 184, 18)', got ''
+- Error: none
+
+Prompt:
+
+```text
+Registers r0,r1,r2 start as (95, 58, 234). Arithmetic is modulo 251. Execute these instructions in order: r1 = r1 + r1 + 234; r0 = r0 XOR r1 XOR 207; r0 = r0 XOR r2 XOR 113; r1 = r1 + r1 + 230; r1 = r1 XOR r2 XOR 168; r1 = r1 * (r1 + 1) + 68; r1 = r1 + 2*r1 + 93; r0 = r0 + 2*r0 + 192; r1 = r1 + 2*r2 + 127; r0 = r0 + r1 + 2; r1 = r1 XOR r1 XOR 250; r2 = r2 + 2*r0 + 213; r1 = r1 + r0 + 247; r2 = r2 * (r2 + 1) + 52; r2 = r2 + 2*r2 + 104; r0 = r0 + 2*r1 + 53; r1 = r1 XOR r0 XOR 176; r1 = r1 + 2*r1 + 91; r0 = r0 * (r0 + 1) + 170; r0 = r0 * (r1 + 1) + 245; r2 = r2 XOR r2 XOR 35; r2 = r2 XOR r2 XOR 193; r1 = r1 XOR r1 XOR 112; r1 = r1 * (r1 + 1) + 66; r2 = r2 * (r0 + 1) + 146; r1 = r1 XOR r1 XOR 31; r2 = r2 * (r2 + 1) + 66; r1 = r1 + 2*r2 + 22; r0 = r0 + 2*r2 + 197; r2 = r2 + r2 + 6; r2 = r2 + r1 + 118; r2 = r2 * (r2 + 1) + 78; r2 = r2 + 2*r2 + 108; r2 = r2 + r1 + 188; r2 = r2 + r0 + 40; r1 = r1 + 2*r0 + 154; r2 = r2 + r0 + 3; r0 = r0 + 2*r0 + 168; r1 = r1 * (r1 + 1) + 203; r0 = r0 + 2*r1 + 114; r2 = r2 * (r1 + 1) + 150; r0 = r0 + r2 + 188; r0 = r0 + 2*r1 + 25; r0 = r0 + r0 + 247; r1 = r1 + 2*r1 + 45; r2 = r2 * (r2 + 1) + 33; r0 = r0 + 2*r1 + 16; r1 = r1 * (r1 + 1) + 104; r1 = r1 + r1 + 42; r2 = r2 * (r0 + 1) + 96; r2 = r2 XOR r0 XOR 113; r1 = r1 * (r0 + 1) + 166; r2 = r2 XOR r2 XOR 43; r1 = r1 + r0 + 142; r2 = r2 * (r1 + 1) + 90; r0 = r0 * (r0 + 1) + 22; r2 = r2 XOR r1 XOR 61; r0 = r0 + r2 + 236; r1 = r1 + r2 + 121; r1 = r1 * (r0 + 1) + 22; r1 = r1 XOR r2 XOR 129; r1 = r1 * (r2 + 1) + 90; r1 = r1 XOR r0 XOR 160; r2 = r2 + r1 + 122; r2 = r2 + 2*r2 + 45; r2 = r2 * (r1 + 1) + 62; r2 = r2 XOR r2 XOR 65; r1 = r1 * (r0 + 1) + 190; r1 = r1 + 2*r1 + 137; r2 = r2 + r0 + 191; r1 = r1 + r2 + 160; r0 = r0 + 2*r1 + 42; r0 = r0 XOR r0 XOR 85; r2 = r2 + r0 + 59; r0 = r0 * (r1 + 1) + 199; r0 = r0 + 2*r1 + 62; r0 = r0 * (r0 + 1) + 214; r1 = r1 + r1 + 50; r2 = r2 XOR r0 XOR 127; r0 = r0 + r2 + 39; r2 = r2 + 2*r2 + 182; r2 = r2 + 2*r0 + 9; r2 = r2 XOR r2 XOR 63; r2 = r2 * (r0 + 1) + 78; r2 = r2 + r1 + 71; r1 = r1 * (r1 + 1) + 77; r2 = r2 + 2*r2 + 169; r1 = r1 + 2*r1 + 29; r0 = r0 + r0 + 162; r0 = r0 + r1 + 116; r2 = r2 * (r2 + 1) + 93; r1 = r1 * (r1 + 1) + 155; r1 = r1 + r0 + 123; r1 = r1 + 2*r2 + 250; r1 = r1 * (r1 + 1) + 183; r2 = r2 XOR r1 XOR 155; r0 = r0 * (r2 + 1) + 248; r2 = r2 * (r1 + 1) + 213; r0 = r0 + r2 + 27; r1 = r1 * (r0 + 1) + 25; r1 = r1 + 2*r1 + 35; r0 = r0 * (r2 + 1) + 93; r2 = r2 + r1 + 175; r0 = r0 + r1 + 61. Return only the final register tuple as (r0, r1, r2).
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-counterexample_search-0077-0f8f4b4a2154
+
+- Family: `counterexample_search`
+- Profile: `extreme`
+- Task hash: `2fa1ed66e16d9f54324c1aa7448a2df82c7707f47effab3563e84635997efca6`
+- Status: `rejected`
+- Verifier: expected '95', got ''
+- Error: none
+
+Prompt:
+
+```text
+Find the smallest integer x in [0, 7067] satisfying all constraints: (46*x + 65) mod 69 = 19; (22*x + 39) mod 69 = 59; (12*x + 6) mod 33 = 24; (16*x + 32) mod 35 = 12; (42*x + 48) mod 64 = 6. Return only x.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-string_rewrite-0078-9f2f78444e8f
+
+- Family: `string_rewrite`
+- Profile: `extreme`
+- Task hash: `a1de0fe030b842a9c8c67d67f4c86293b15b27500d9c48b8a9275462353c0160`
+- Status: `rejected`
+- Verifier: expected '21030023121201332010000000120320', got ''
+- Error: none
+
+Prompt:
+
+```text
+Start with circular string 00303033103301331223213230222320. For each step, replace every position i simultaneously using the pair s[i]s[(i+1) mod n]. Rules: 00->0, 01->3, 02->2, 03->1, 10->0, 11->1, 12->0, 13->3, 20->3, 21->0, 22->0, 23->0, 30->2, 31->2, 32->3, 33->1. After 81 steps, what is the string? Return only the final string.
+```
+
+Answer:
+
+```text
+
+```
+
+### deepseek-v4-pro / lp-grid_checksum-0079-ce2b57a90405
+
+- Family: `grid_checksum`
+- Profile: `extreme`
+- Task hash: `8332045781a29799183183fffe0545d861518eb14a88b782d0b769050bc88363`
+- Status: `rejected`
+- Verifier: expected '423090', got ''
+- Error: none
+
+Prompt:
+
+```text
+On this 13x13 grid, rows are: 9 6 6 8 4 4 3 3 5 6 6 0 8; 7 0 0 4 0 7 3 1 9 0 5 5 7; 9 4 4 2 7 0 4 7 6 8 1 8 9; 9 7 0 2 8 6 1 5 8 7 2 6 7; 4 6 2 4 4 2 3 3 9 9 5 9 5; 8 2 4 5 4 6 7 8 5 7 3 4 9; 9 2 9 7 2 2 0 5 7 4 7 3 8; 7 3 8 3 0 7 2 4 5 1 1 8 2; 0 8 4 2 5 1 1 0 3 0 1 3 1; 4 0 6 8 1 1 4 9 8 1 7 3 8; 7 1 1 4 2 6 5 4 3 2 0 8 0; 2 0 4 9 5 6 1 0 7 2 0 8 9; 7 7 7 0 1 1 8 8 2 8 5 5 0. Start at row 12, column 11. Follow moves RRUDRRDURRULDDLRDRDDDDDDULLRLUURRLURLUDDURLRDUDRLLRRDDLDUDUULLUDLUDLDLDLRRLDRUDUDRDLUUUUDUULDDLDDRURLRURDUDDLRRLDULDDLULRURDULDULLUDRDRDLUDLDUURLRDULLRLLUDDRDLLDLUDRLLUDRURRULRUUUUDDRDLRRUDRDRLUUDLDDLDUDLDLULDDDUUDLDULULDURULURUUDUUDUDRUDULLUDD with wraparound at edges. Checksum starts at 0; after visiting each new cell, checksum = (checksum*31 + cell_value) mod 1000003. Include the starting cell before moves. Return only the final checksum integer.
+```
+
+Answer:
+
+```text
+
+```
+
