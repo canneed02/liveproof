@@ -41,7 +41,7 @@ def load_dotenv(path: Path = Path(".env")) -> None:
 def load_settings() -> Settings:
     load_dotenv()
     combined = os.getenv("NVIDIA_API_KEYS", "")
-    numbered = [os.getenv("NVIDIA_API_KEY_1", ""), os.getenv("NVIDIA_API_KEY_2", "")]
+    numbered = [os.getenv(f"NVIDIA_API_KEY_{index}", "") for index in range(1, 11)]
     keys = [item.strip() for item in combined.split(",") if item.strip()]
     keys.extend(item.strip() for item in numbered if item and item.strip())
 

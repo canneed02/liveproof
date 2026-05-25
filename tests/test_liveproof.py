@@ -1,7 +1,9 @@
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
+from liveproof.config import load_settings
 from liveproof.generators import FAMILIES, generate_tasks
 from liveproof.io import read_tasks, write_jsonl
 from liveproof.schema import stable_hash
@@ -53,6 +55,18 @@ class LiveProofTest(unittest.TestCase):
 
         self.assertEqual([task.id for task in loaded], [task.id for task in tasks])
         self.assertEqual([solve(task) for task in loaded], [solve(task) for task in tasks])
+
+    def test_numbered_nvidia_keys_are_loaded(self):
+        env = {
+            "NVIDIA_API_KEYS": "shared-a,shared-b",
+            "NVIDIA_API_KEY_1": "shared-a",
+            "NVIDIA_API_KEY_2": "numbered-b",
+            "NVIDIA_API_KEY_3": "numbered-c",
+        }
+        with mock.patch.dict("os.environ", env, clear=True):
+            settings = load_settings()
+
+        self.assertEqual(settings.api_keys, ("shared-a", "shared-b", "numbered-b", "numbered-c"))
 
 
 if __name__ == "__main__":

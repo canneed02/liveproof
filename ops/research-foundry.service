@@ -1,0 +1,20 @@
+[Unit]
+Description=LiveProof Research Foundry one-shot cycle
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/root/liveproof-agent
+Environment=FOUNDRY_PUSH=1
+Environment=FOUNDRY_TASK_COUNT=24
+Environment=FOUNDRY_EVAL_LIMIT=8
+Environment=FOUNDRY_MODEL_LIMIT=3
+Environment=FOUNDRY_MAX_CONCURRENCY=3
+ExecStart=/root/liveproof-agent/.venv/bin/python /root/liveproof-agent/scripts/research_foundry.py --repo /root/liveproof-agent --db /root/research-foundry/foundry.db --state-dir /root/research-foundry
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+[Install]
+WantedBy=multi-user.target
