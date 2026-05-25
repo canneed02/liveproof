@@ -220,7 +220,7 @@ def require_clean_or_agent_branch(repo: Path) -> None:
 
 def checkout_branch(repo: Path, branch: str) -> None:
     git(repo, ["fetch", "origin", "main"], timeout=300, check=False)
-    git(repo, ["checkout", "-B", branch])
+    git(repo, ["checkout", "-B", branch, "origin/main"])
 
 
 def run_liveproof(
