@@ -46,19 +46,11 @@ FOUNDRY_PUSH=1 scripts/research_foundry.py --repo /root/liveproof-agent --task-c
 Review pushed `agent/...` branches before merging or publishing. A foundry
 branch is evidence collection, not a scientific claim by itself.
 
-## Long-Term Planning
+## Governance
 
-The current foundry is Level 1. The long-term autonomous institute plan is split
-across:
-
-- `docs/autonomous_research_institute_plan.md`
-- `docs/autonomous_execution_roadmap.md`
-- `docs/autonomous_operating_constitution.md`
-
-These documents define the target architecture, autonomy levels, publication
-rules, governance gates, and execution roadmap before any higher-autonomy code is
-implemented.
-
-Governance hardening is tracked in:
+Governance hardening for the LiveProof-specific foundry is tracked in:
 
 - `docs/governance.md`
+
+Broader autonomous research planning now lives outside LiveProof in the
+independent AxiomForge project.
