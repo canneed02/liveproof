@@ -13,7 +13,7 @@ Before opening a change:
 Required checks:
 
 ```bash
-python3 -m unittest discover -s tests
+scripts/ci_hygiene.sh
 liveproof audit --tasks corpus/v2_extreme_private.jsonl
 ```
 
